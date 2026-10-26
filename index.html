@@ -66,10 +66,12 @@
                 </div>
             </div>
 
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium tracking-wide">
+                <a href="#memberships" class="hover:text-ranch-gold transition" data-i18n="nav_memberships">Membresías</a>
+                <a href="#member-portal" class="hover:text-ranch-gold text-ranch-gold font-semibold transition" data-i18n="nav_portal">Portal Socios & QRs</a>
                 <a href="#experiences" class="hover:text-ranch-gold transition" data-i18n="nav_experiences">Experiencias</a>
-                <a href="#passes" class="hover:text-ranch-gold transition" data-i18n="nav_passes">Pases & Acceso</a>
-                <a href="#calendar" class="hover:text-ranch-gold transition" data-i18n="nav_calendar">Calendario Hoy</a>
+                <a href="#passes" class="hover:text-ranch-gold transition" data-i18n="nav_passes">Pases Diarios</a>
+                <a href="#calendar" class="hover:text-ranch-gold transition" data-i18n="nav_calendar">Calendario</a>
                 <a href="#menu" class="hover:text-ranch-gold transition" data-i18n="nav_menu">Midway House</a>
             </nav>
 
@@ -96,14 +98,14 @@
                 <span class="text-ranch-gold italic" data-i18n="hero_title_2">Se Vive Sin Límites</span>
             </h1>
             <p class="text-lg sm:text-xl text-gray-200 font-light max-w-2xl mx-auto mb-10 leading-relaxed" data-i18n="hero_subtitle">
-                Todo acceso requiere membresía o pase de entrada. Disfruta caballos, avituallamiento de atletas y los programas profesionales de MastroGolf.
+                Disfruta caballos, avituallamiento de atletas, simuladores Golfzon WAVE y planes de membresía diseñados para tu estilo de vida.
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#passes" class="w-full sm:w-auto bg-ranch-gold text-ranch-dark font-bold px-8 py-4 rounded-xl shadow-xl hover:bg-white transition text-center tracking-wide" data-i18n="cta_pass">
-                    Obtener Pase de Entrada ($150 MXN)
+                <a href="#memberships" class="w-full sm:w-auto bg-ranch-gold text-ranch-dark font-bold px-8 py-4 rounded-xl shadow-xl hover:bg-white transition text-center tracking-wide" data-i18n="cta_memberships">
+                    Ver Membresías Exclusivas
                 </a>
-                <a href="#experiences" class="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/30 text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/20 transition text-center tracking-wide" data-i18n="cta_explore">
-                    Explorar Experiencias
+                <a href="#member-portal" class="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/30 text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/20 transition text-center tracking-wide" data-i18n="cta_portal">
+                    Acceso Socios (Generar Invitados)
                 </a>
             </div>
         </div>
@@ -115,200 +117,212 @@
             <div class="flex flex-col md:flex-row items-center justify-center gap-3">
                 <i class="fa-solid fa-ticket text-ranch-gold text-2xl"></i>
                 <p class="text-sm md:text-base font-medium" data-i18n="access_banner">
-                    <strong>Política de Acceso:</strong> Todo visitante adquiere un pase de entrada general al llegar ($150 MXN) o el Pase Todo Incluido ($1,800 MXN). El acceso es nuestro valor; la experiencia, nuestra entrega.
+                    <strong>Operación Santa Carmen:</strong> Acceso exclusivo con membresía o pase diario. Las experiencias con coaches independientes se cobran en el sitio mediante dispositivos Point Air.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- EXPERIENCES & MASTROGOLF SECTION -->
+    <!-- DETAILED MEMBERSHIPS SECTION -->
+    <section id="memberships" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-ranch-gold text-xs font-bold tracking-widest uppercase" data-i18n="mem_tag">Comunidad & Lealtad</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-bold mt-2 text-ranch-dark" data-i18n="mem_title">Membresías Santa Carmen</h2>
+            <p class="text-gray-600 mt-4 text-base" data-i18n="mem_desc">Entrena diario, asegura tu espacio en Golfzon WAVE, disfruta el mundo ecuestre y forma parte de nuestra exclusiva comunidad.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <!-- Plan 1: Athlete & Golf Club -->
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-200/80 p-8 flex flex-col justify-between relative group hover:shadow-2xl transition duration-300">
+                <div>
+                    <div class="text-ranch-gold text-xs font-bold uppercase tracking-widest mb-1" data-i18n="mem1_badge">Individual / Pro</div>
+                    <h3 class="font-serif text-3xl font-bold text-ranch-dark mb-2" data-i18n="mem1_name">Athlete & Golf Club</h3>
+                    <p class="text-gray-600 text-xs mb-6" data-i18n="mem1_desc">Diseñado para golfistas y atletas enfocados en su rendimiento diario con simuladores.</p>
+                    
+                    <div class="text-ranch-green font-bold text-3xl mb-6">$3,000 <span class="text-sm font-normal text-gray-500" data-i18n="per_month">MXN / mes</span></div>
+                    
+                    <ul class="space-y-3 text-sm text-gray-700 mb-8">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-ranch-gold mr-3"></i> <span data-i18n="mem1_f1">Acceso ilimitado diario individual sin pago de entrada</span></li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-ranch-gold mr-3"></i> <span data-i18n="mem1_f2">8 horas mensuales de práctica en simulador Golfzon WAVE</span></li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-ranch-gold mr-3"></i> <span data-i18n="mem1_f3">10% de descuento permanente en Midway House</span></li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-ranch-gold mr-3"></i> <span data-i18n="mem1_f4">Tarifas preferenciales en clínicas MastroGolf</span></li>
+                    </ul>
+                </div>
+                <button onclick="alert('Inscríbete a Athlete & Golf Club mediante suscripción automática de Mercado Pago.')" class="w-full bg-ranch-dark text-white font-bold py-3.5 rounded-xl hover:bg-ranch-green transition text-sm shadow" data-i18n="btn_join_mem1">
+                    Suscribirme (Mercado Pago)
+                </button>
+            </div>
+
+            <!-- Plan 2: Family Club -->
+            <div class="bg-ranch-dark text-white rounded-3xl shadow-2xl overflow-hidden border-2 border-ranch-gold p-8 flex flex-col justify-between relative">
+                <span class="bg-ranch-gold text-ranch-dark text-[10px] font-bold px-3 py-1 rounded-full uppercase absolute top-6 right-6" data-i18n="badge_best_value">Familiar & VIP</span>
+                <div>
+                    <div class="text-ranch-gold text-xs font-bold uppercase tracking-widest mb-1" data-i18n="mem2_badge">Estilo de Vida Campestre</div>
+                    <h3 class="font-serif text-3xl font-bold text-ranch-sand mb-2" data-i18n="mem2_name">Santa Carmen Family Club</h3>
+                    <p class="text-gray-300 text-xs mb-6" data-i18n="mem2_desc">Acceso total para cónyuge, hijos menores y opción de integrar a hijos de 18 años.</p>
+                    
+                    <div class="text-ranch-gold font-bold text-3xl mb-6">$5,500 <span class="text-sm font-normal text-gray-400" data-i18n="per_month">MXN / mes</span></div>
+                    
+                    <ul class="space-y-3 text-sm text-gray-200 mb-8">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-ranch-gold mr-3"></i> <span data-i18n="mem2_f1">Acceso ilimitado titular + cónyuge + hijos menores de 18</span></li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-ranch-gold mr-3"></i> <span data-i18n="mem2_f2"><strong>Opción Hijo 18+ / Estudiante:</strong> +$900 MXN/mes con QR independiente</span></li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-ranch-gold mr-3"></i> <span data-i18n="mem2_f3">Acceso al mundo ecuestre y simuladores Golfzon WAVE</span></li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-ranch-gold mr-3"></i> <span data-i18n="mem2_f4">$600 MXN de crédito mensual en Midway House incluidos</span></li>
+                    </ul>
+                </div>
+                <button onclick="alert('Inscríbete a Santa Carmen Family Club mediante suscripción automática de Mercado Pago.')" class="w-full bg-ranch-gold text-ranch-dark font-bold py-3.5 rounded-xl hover:bg-white transition text-sm shadow-lg" data-i18n="btn_join_mem2">
+                    Suscribirme (Mercado Pago)
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEMBER PORTAL & GUEST PASS GENERATOR (NEW INTERACTIVE) -->
+    <section id="member-portal" class="py-20 bg-white border-y border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-ranch-sand rounded-3xl p-8 sm:p-12 border border-ranch-gold/30 shadow-xl">
+                <div class="text-center max-w-xl mx-auto mb-10">
+                    <span class="text-ranch-gold text-xs font-bold tracking-widest uppercase" data-i18n="portal_tag">Portal Exclusivo para Socios</span>
+                    <h2 class="font-serif text-3xl font-bold mt-2 text-ranch-dark" data-i18n="portal_title">Genera Tus QRs de Invitado Mensuales</h2>
+                    <p class="text-gray-600 text-xs mt-2" data-i18n="portal_desc">Ingresa tu correo de socio para generar al instante tus pases de cortesía (2 disponibles por mes).</p>
+                </div>
+
+                <div class="space-y-4 max-w-md mx-auto mb-8">
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-700 uppercase mb-1" data-i18n="portal_email">Correo Electrónico de Socio</label>
+                        <input type="email" id="member-email" placeholder="socio@santacarmen.com" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-ranch-green">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-700 uppercase mb-1" data-i18n="portal_guest_name">Nombre Completo del Invitado</label>
+                        <input type="text" id="guest-name" placeholder="Ej. Carlos Mendoza" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-ranch-green">
+                    </div>
+                    <button onclick="generateGuestQR()" class="w-full bg-ranch-green text-white font-bold py-3.5 rounded-xl hover:bg-ranch-dark transition text-sm shadow" data-i18n="btn_gen_guest">
+                        Generar Pase de Invitado (QR)
+                    </button>
+                </div>
+
+                <!-- Guest QR Result Box -->
+                <div id="guest-qr-result" class="hidden pt-6 border-t border-gray-300 text-center">
+                    <div class="inline-block bg-white p-4 rounded-2xl shadow-md border border-gray-200 mb-3">
+                        <div id="guest-qrcode-container" class="flex justify-center"></div>
+                    </div>
+                    <div id="guest-pass-details" class="text-xs font-medium text-gray-700 mb-4"></div>
+                    <p class="text-[11px] text-ranch-green font-bold uppercase tracking-wider" data-i18n="guest_notice">¡Comparte este código QR o captura de pantalla con tu invitado para su acceso!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCES SECTION -->
     <section id="experiences" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16">
             <span class="text-ranch-gold text-xs font-bold tracking-widest uppercase" data-i18n="exp_tag">El Ecosistema Santa Carmen</span>
-            <h2 class="font-serif text-3xl sm:text-5xl font-bold mt-2 text-ranch-dark" data-i18n="exp_title">Experiencias A La Carta & Todo Incluido</h2>
-            <p class="text-gray-600 mt-4 text-base" data-i18n="exp_desc">Selecciona tu actividad favorita o libera todo el potencial del rancho con nuestro pase diario ilimitado.</p>
+            <h2 class="font-serif text-3xl sm:text-5xl font-bold mt-2 text-ranch-dark" data-i18n="exp_title">Experiencias, Equinos & Golfzon WAVE</h2>
+            <p class="text-gray-600 mt-4 text-base" data-i18n="exp_desc">Selecciona tu actividad favorita y paga de forma independiente con los dispositivos Point Air de nuestros instructores.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Card 1: Equestrian -->
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200/80 flex flex-col justify-between group hover:shadow-2xl transition duration-300">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200/80 flex flex-col justify-between">
                 <div>
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=800&q=80" alt="Equestrian" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <div class="absolute top-4 right-4 bg-ranch-dark/80 backdrop-blur-md text-ranch-gold px-3 py-1 rounded-full text-xs font-semibold" data-i18n="badge_horses">
-                            Equestrian
-                        </div>
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=800&q=80" alt="Equestrian" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
-                        <h3 class="font-serif text-2xl font-bold text-ranch-dark mb-2" data-i18n="card1_title">Mundo Ecuestre & Cuidado</h3>
-                        <p class="text-gray-600 text-sm mb-4" data-i18n="card1_desc">Paseos guiados por senderos del rancho, sesiones de lavado, cuidado y conexión profunda con los equinos.</p>
-                        <div class="text-ranch-green font-bold text-lg mb-4">$600 - $1,000 MXN <span class="text-xs font-normal text-gray-500" data-i18n="per_session">por sesión</span></div>
+                        <h3 class="font-serif text-xl font-bold text-ranch-dark mb-2" data-i18n="card1_title">Mundo Ecuestre & Cuidado</h3>
+                        <p class="text-gray-600 text-xs mb-4" data-i18n="card1_desc">Paseos guiados por senderos del rancho y conexión con equinos. Paga con Point Air del coach.</p>
+                        <div class="text-ranch-green font-bold text-base mb-4">$600 - $1,000 MXN <span class="text-xs font-normal text-gray-500" data-i18n="per_session">por sesión</span></div>
                     </div>
                 </div>
                 <div class="px-6 pb-6">
-                    <button onclick="selectExperience('Equestrian Experience', 800)" class="w-full bg-ranch-dark text-ranch-sand py-3 rounded-xl font-semibold hover:bg-ranch-green transition text-sm" data-i18n="btn_select">
-                        Seleccionar Actividad
+                    <button onclick="alert('Reserva tu sesión ecuestre y paga directamente con el Point Air del coach en establos.')" class="w-full bg-ranch-dark text-ranch-sand py-2.5 rounded-xl font-semibold hover:bg-ranch-green transition text-xs" data-i18n="btn_coach_pay">
+                        Pagar con Coach (Point Air)
                     </button>
                 </div>
             </div>
 
-            <!-- Card 2: MastroGolf -->
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200/80 flex flex-col justify-between group hover:shadow-2xl transition duration-300">
+            <!-- Card 2 -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200/80 flex flex-col justify-between">
                 <div>
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&fit=crop&w=800&q=80" alt="MastroGolf" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <div class="absolute top-4 right-4 bg-ranch-dark/80 backdrop-blur-md text-ranch-gold px-3 py-1 rounded-full text-xs font-semibold" data-i18n="badge_golf">
-                            MastroGolf Programs
-                        </div>
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&fit=crop&w=800&q=80" alt="Golfzon WAVE" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
-                        <h3 class="font-serif text-2xl font-bold text-ranch-dark mb-2" data-i18n="card2_title">MastroGolf & Práctica</h3>
-                        <p class="text-gray-600 text-sm mb-4" data-i18n="card2_desc">Sesiones de práctica en range, clínicas especializadas y tecnología de simulación de alto rendimiento.</p>
-                        <div class="text-ranch-green font-bold text-lg mb-4">$350 - $500 MXN <span class="text-xs font-normal text-gray-500" data-i18n="per_bucket">por sesión / cubo</span></div>
+                        <h3 class="font-serif text-xl font-bold text-ranch-dark mb-2" data-i18n="card2_title">Simulación & Golfzon WAVE</h3>
+                        <p class="text-gray-600 text-xs mb-4" data-i18n="card2_desc">Práctica de alto rendimiento con tecnología Golfzon WAVE. Paga directo con el instructor.</p>
+                        <div class="text-ranch-green font-bold text-base mb-4">$350 - $500 MXN <span class="text-xs font-normal text-gray-500" data-i18n="per_bucket">por sesión / cubo</span></div>
                     </div>
                 </div>
                 <div class="px-6 pb-6">
-                    <button onclick="selectExperience('MastroGolf Range & Session', 400)" class="w-full bg-ranch-dark text-ranch-sand py-3 rounded-xl font-semibold hover:bg-ranch-green transition text-sm" data-i18n="btn_select">
-                        Seleccionar Actividad
+                    <button onclick="alert('Paga tu sesión de simulación Golfzon WAVE directamente con el instructor usando su terminal Point Air.')" class="w-full bg-ranch-dark text-ranch-sand py-2.5 rounded-xl font-semibold hover:bg-ranch-green transition text-xs" data-i18n="btn_coach_pay">
+                        Pagar con Coach (Point Air)
                     </button>
                 </div>
             </div>
 
-            <!-- Card 3: Midway House -->
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200/80 flex flex-col justify-between group hover:shadow-2xl transition duration-300">
+            <!-- Card 3 -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200/80 flex flex-col justify-between">
                 <div>
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Midway House" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <div class="absolute top-4 right-4 bg-ranch-dark/80 backdrop-blur-md text-ranch-gold px-3 py-1 rounded-full text-xs font-semibold" data-i18n="badge_midway">
-                            Midway House
-                        </div>
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Midway House" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
-                        <h3 class="font-serif text-2xl font-bold text-ranch-dark mb-2" data-i18n="card3_title">Midway House & Snack Bar</h3>
-                        <p class="text-gray-600 text-sm mb-4" data-i18n="card3_desc">Estación de avituallamiento para atletas: bebidas frías, electrolitos, snacks y avituallamiento express.</p>
-                        <div class="text-ranch-green font-bold text-lg mb-4" data-i18n="card3_price">Snacks & Bebidas a la Mano</div>
+                        <h3 class="font-serif text-xl font-bold text-ranch-dark mb-2" data-i18n="card3_title">Midway House & Snack Bar</h3>
+                        <p class="text-gray-600 text-xs mb-4" data-i18n="card3_desc">Estación de avituallamiento para atletas: bebidas frías, electrolitos y snacks. Paga con tarjeta o Point Air.</p>
+                        <div class="text-ranch-green font-bold text-base mb-4" data-i18n="card3_price">Snacks & Bebidas a la Mano</div>
                     </div>
                 </div>
                 <div class="px-6 pb-6">
-                    <button onclick="selectExperience('Midway House Fuel Pass', 200)" class="w-full bg-ranch-dark text-ranch-sand py-3 rounded-xl font-semibold hover:bg-ranch-green transition text-sm" data-i18n="btn_select">
-                        Seleccionar Actividad
-                    </button>
+                    <a href="#menu" class="block w-full bg-ranch-dark text-center text-ranch-sand py-2.5 rounded-xl font-semibold hover:bg-ranch-green transition text-xs" data-i18n="btn_view_menu">
+                        Ver Productos
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- INTERACTIVE CALENDAR & LIVE ADMIN WIDGET SECTION -->
+    <!-- LIVE GOOGLE CALENDAR SECTION -->
     <section id="calendar" class="py-20 bg-white border-y border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between mb-12">
-                <div>
-                    <span class="text-ranch-gold text-xs font-bold tracking-widest uppercase" data-i18n="cal_tag">Programación del Día</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-1 text-ranch-dark" data-i18n="cal_title">Calendario de Actividades</h2>
-                    <p class="text-gray-600 text-sm mt-1" id="current-date-display">Lunes, 26 de Octubre, 2026</p>
-                </div>
-                <div class="mt-4 md:mt-0 flex items-center space-x-3">
-                    <span class="bg-ranch-sand px-4 py-2 rounded-xl text-xs font-semibold text-ranch-dark border border-ranch-gold/30">
-                        <i class="fa-solid fa-circle text-green-600 mr-1.5 text-[10px]"></i> <span data-i18n="status_active">Actividades Abiertas</span>
-                    </span>
-                </div>
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-ranch-gold text-xs font-bold tracking-widest uppercase" data-i18n="cal_tag">Programación del Día</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-1 text-ranch-dark" data-i18n="cal_title">Calendario de Actividades</h2>
+                <p class="text-gray-600 text-sm mt-1">Consulta los horarios en tiempo real actualizados por nuestro equipo.</p>
             </div>
-
-            <!-- LIVE GOOGLE CALENDAR EMBED WIDGET -->
-            <div class="bg-ranch-sand rounded-3xl p-6 sm:p-8 border border-ranch-gold/30 shadow-xl calendar-iframe mb-12">
+            <div class="bg-ranch-sand rounded-3xl p-6 sm:p-8 border border-ranch-gold/30 shadow-xl calendar-iframe">
                 <iframe src="https://calendar.google.com/calendar/embed?src=f8e8951d7f0116cdfca40407e63f87389e79641f0eafd4acffc7ae005df28700%40group.calendar.google.com&ctz=America%2FTijuana"></iframe>
-            </div>
-
-            <!-- Calendar Schedule Quick Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <!-- Slot 1 -->
-                <div class="bg-ranch-sand rounded-2xl p-6 border border-ranch-gold/30 flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs font-bold text-ranch-gold uppercase tracking-wider">09:00 AM - 11:00 AM</span>
-                        <h3 class="font-serif text-xl font-bold text-ranch-dark mt-2" data-i18n="cal_item1_title">Clínica Matutina MastroGolf</h3>
-                        <p class="text-gray-600 text-xs mt-2" data-i18n="cal_item1_desc">Alineación, swing biomechanics y práctica guiada con Trackman en bahías.</p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-gray-300 flex items-center justify-between text-xs font-semibold text-ranch-green">
-                        <span data-i18n="cal_included">Incluido en Día / $350</span>
-                        <i class="fa-solid fa-golf-ball-tee"></i>
-                    </div>
-                </div>
-
-                <!-- Slot 2 -->
-                <div class="bg-ranch-sand rounded-2xl p-6 border border-ranch-gold/30 flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs font-bold text-ranch-gold uppercase tracking-wider">11:30 AM - 01:00 PM</span>
-                        <h3 class="font-serif text-xl font-bold text-ranch-dark mt-2" data-i18n="cal_item2_title">Ruta & Baño de Equinos</h3>
-                        <p class="text-gray-600 text-xs mt-2" data-i18n="cal_item2_desc">Experiencia guiada de cabalgata y cuidado práctico de los caballos en los establos.</p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-gray-300 flex items-center justify-between text-xs font-semibold text-ranch-green">
-                        <span data-i18n="cal_included">Incluido en Día / $600</span>
-                        <i class="fa-solid fa-horse"></i>
-                    </div>
-                </div>
-
-                <!-- Slot 3 -->
-                <div class="bg-ranch-sand rounded-2xl p-6 border border-ranch-gold/30 flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs font-bold text-ranch-gold uppercase tracking-wider">02:00 PM - 04:00 PM</span>
-                        <h3 class="font-serif text-xl font-bold text-ranch-dark mt-2" data-i18n="cal_item3_title">Midway House & Snack Break</h3>
-                        <p class="text-gray-600 text-xs mt-2" data-i18n="cal_item3_desc">Recarga de electrolitos, bebidas frías y snacks de alto rendimiento para atletas.</p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-gray-300 flex items-center justify-between text-xs font-semibold text-ranch-green">
-                        <span data-i18n="cal_included">Incluido en Todo Incluido</span>
-                        <i class="fa-solid fa-bolt"></i>
-                    </div>
-                </div>
-
-                <!-- Slot 4 -->
-                <div class="bg-ranch-sand rounded-2xl p-6 border border-ranch-gold/30 flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs font-bold text-ranch-gold uppercase tracking-wider">04:30 PM - 06:30 PM</span>
-                        <h3 class="font-serif text-xl font-bold text-ranch-dark mt-2" data-i18n="cal_item4_title">Torneo Relámpago Match Play</h3>
-                        <p class="text-gray-600 text-xs mt-2" data-i18n="cal_item4_desc">Competencia amistosa en simuladores y práctica libre al atardecer.</p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-gray-300 flex items-center justify-between text-xs font-semibold text-ranch-green">
-                        <span data-i18n="cal_included">Incluido en Día</span>
-                        <i class="fa-solid fa-trophy"></i>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- PASSES & DIGITAL CHECK-IN GENERATOR -->
+    <!-- PASSES & MERCADO PAGO ONLINE CHECKOUT -->
     <section id="passes" class="py-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="bg-ranch-dark text-white rounded-3xl p-8 sm:p-12 shadow-2xl border border-ranch-gold/40 relative overflow-hidden">
-            <div class="absolute -right-16 -top-16 w-64 h-64 bg-ranch-gold/10 rounded-full blur-3xl pointer-events-none"></div>
-
             <div class="text-center max-w-2xl mx-auto mb-12">
-                <span class="text-ranch-gold text-xs font-bold tracking-widest uppercase" data-i18n="pass_tag">Genera Tu Acceso al Instante</span>
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-2 text-ranch-sand" data-i18n="pass_title">Selecciona Tu Pase de Entrada</h2>
-                <p class="text-gray-300 text-sm mt-3" data-i18n="pass_desc">Todo visitante paga su derecho de acceso a la propiedad. Elige entre la entrada general o el pase todo incluido.</p>
+                <span class="text-ranch-gold text-xs font-bold tracking-widest uppercase" data-i18n="pass_tag">Pago en Línea & Acceso QR</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-2 text-ranch-sand" data-i18n="pass_title">Pase de Entrada Diario</h2>
+                <p class="text-gray-300 text-sm mt-3" data-i18n="pass_desc">Si no cuentas con membresía, adquiere tu pase diario en línea con Mercado Pago.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
-                <!-- Option 1: General Entrance Fee -->
                 <div onclick="selectPassType('General Entry', 150)" id="card-general" class="bg-white/5 border-2 border-ranch-gold/40 rounded-2xl p-6 cursor-pointer hover:bg-white/10 transition duration-300 relative">
                     <div class="absolute top-4 right-4 text-ranch-gold"><i class="fa-solid fa-circle-check text-xl" id="check-general"></i></div>
                     <h3 class="font-serif text-2xl font-bold text-ranch-sand mb-1" data-i18n="pass1_name">Pase de Entrada General</h3>
-                    <p class="text-gray-300 text-xs mb-4" data-i18n="pass1_desc">Acceso básico a las instalaciones, áreas comunes y zonas de descanso.</p>
+                    <p class="text-gray-300 text-xs mb-4" data-i18n="pass1_desc">Acceso básico a las instalaciones y áreas comunes.</p>
                     <div class="text-ranch-gold font-bold text-2xl">$150 MXN <span class="text-xs text-gray-400 font-normal" data-i18n="per_day">por día</span></div>
                 </div>
 
-                <!-- Option 2: All Inclusive Day Pass -->
                 <div onclick="selectPassType('All-Inclusive Day Pass', 1800)" id="card-all" class="bg-ranch-gold/20 border-2 border-ranch-gold rounded-2xl p-6 cursor-pointer hover:bg-ranch-gold/30 transition duration-300 relative shadow-lg">
                     <span class="bg-ranch-gold text-ranch-dark text-[10px] font-bold px-3 py-0.5 rounded-full uppercase absolute -top-3 left-6" data-i18n="badge_recommended">Recomendado</span>
                     <div class="absolute top-4 right-4 text-ranch-gold"><i class="fa-solid fa-circle-check text-xl" id="check-all"></i></div>
-                    <h3 class="font-serif text-2xl font-bold text-ranch-sand mb-1" data-i18n="pass2_name">Pase Todo Incluido</h3>
-                    <p class="text-gray-300 text-xs mb-4" data-i18n="pass2_desc">Acceso total: caballos, range de golf ilimitado, snacks en Midway House y alimentos todo el día.</p>
+                    <h3 class="font-serif text-2xl font-bold text-ranch-sand mb-1" data-i18n="pass2_name">Pase Todo Incluido del Día</h3>
+                    <p class="text-gray-300 text-xs mb-4" data-i18n="pass2_desc">Acceso total: caballos, range Golfzon WAVE y snacks todo el día.</p>
                     <div class="text-ranch-gold font-bold text-2xl">$1,800 MXN <span class="text-xs text-gray-400 font-normal" data-i18n="per_day">por día</span></div>
                 </div>
             </div>
 
-            <!-- Pass Form & QR Generator -->
             <div class="bg-white text-ranch-dark rounded-2xl p-6 sm:p-8">
-                <h3 class="font-serif text-xl font-bold mb-4" data-i18n="form_title">Información del Visitante para Generar Pase QR</h3>
+                <h3 class="font-serif text-xl font-bold mb-4" data-i18n="form_title">Datos del Visitante & Pago con Mercado Pago</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                     <div>
                         <label class="block text-xs font-semibold text-gray-700 uppercase mb-1" data-i18n="form_name">Nombre Completo</label>
@@ -320,11 +334,16 @@
                     </div>
                 </div>
 
-                <button onclick="generateQRCode()" class="w-full bg-ranch-green text-white font-bold py-4 rounded-xl hover:bg-ranch-dark transition text-center shadow-lg" data-i18n="btn_generate">
-                    Generar Mi Pase Digital & Código QR
-                </button>
+                <div class="space-y-3">
+                    <button onclick="payWithMercadoPago()" class="w-full bg-[#009EE3] hover:bg-[#0081B8] text-white font-bold py-4 rounded-xl transition flex items-center justify-center space-x-3 shadow-lg text-sm">
+                        <i class="fa-solid fa-credit-card text-lg"></i>
+                        <span id="mp-button-text">Pagar con Mercado Pago / Tarjeta</span>
+                    </button>
+                    <button onclick="generateQRCodeSimulated()" class="w-full bg-ranch-green text-white font-semibold py-3 rounded-xl hover:bg-ranch-dark transition text-xs" data-i18n="btn_simulate_qr">
+                        [Simular Pago Exitoso] Generar Mi QR de Acceso
+                    </button>
+                </div>
 
-                <!-- QR Result Container (Hidden Initially) -->
                 <div id="qr-result-box" class="hidden mt-8 pt-8 border-t border-gray-200 text-center">
                     <div class="inline-block bg-white p-4 rounded-2xl shadow-xl border border-gray-200 mb-4">
                         <div id="qrcode-container" class="flex justify-center"></div>
@@ -340,47 +359,44 @@
         </div>
     </section>
 
-    <!-- MIDWAY HOUSE & SNACK BAR CONCEPT SECTION -->
+    <!-- MIDWAY HOUSE CONCEPT SECTION -->
     <section id="menu" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16">
             <span class="text-ranch-gold text-xs font-bold tracking-widest uppercase" data-i18n="menu_tag">Avituallamiento & Athlete Fuel</span>
             <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-2 text-ranch-dark" data-i18n="menu_title">Midway House & Snack Bar</h2>
-            <p class="text-gray-600 mt-2 text-sm" data-i18n="menu_desc">Productos populares y de alta calidad para atletas, golfistas y visitantes. Snacking rápido, cero esperas, 100% energía.</p>
+            <p class="text-gray-600 mt-2 text-sm" data-i18n="menu_desc">Productos populares y de alta calidad para atletas y visitantes. Snacking rápido, cero esperas, 100% energía.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- Item 1 -->
             <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-200 flex flex-col justify-between">
                 <div>
                     <div class="flex justify-between items-start mb-2">
                         <h3 class="font-serif font-bold text-lg text-ranch-dark" data-i18n="m1_name">Hidratación & Electrolitos</h3>
                         <span class="text-ranch-green font-bold text-sm">$45 - $80 MXN</span>
                     </div>
-                    <p class="text-gray-600 text-xs" data-i18n="m1_desc">Bebidas isotónicas premium, agua de coco natural, líquidos electrolíticos y cafés fríos en barra fría.</p>
+                    <p class="text-gray-600 text-xs" data-i18n="m1_desc">Bebidas isotónicas premium, agua de coco natural, líquidos electrolíticos y cafés fríos.</p>
                 </div>
                 <div class="mt-4 pt-3 border-t border-gray-100 text-[11px] text-ranch-gold font-semibold uppercase tracking-wider" data-i18n="m1_tag">Energía instantánea</div>
             </div>
 
-            <!-- Item 2 -->
             <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-200 flex flex-col justify-between">
                 <div>
                     <div class="flex justify-between items-start mb-2">
                         <h3 class="font-serif font-bold text-lg text-ranch-dark" data-i18n="m2_name">Barras de Proteína & Energy Fuel</h3>
                         <span class="text-ranch-green font-bold text-sm">$50 - $90 MXN</span>
                     </div>
-                    <p class="text-gray-600 text-xs" data-i18n="m2_desc">Selección de barras proteicas (RXBAR, KIND, GoMacro), biltong, jerky y frutos secos para el recorrido.</p>
+                    <p class="text-gray-600 text-xs" data-i18n="m2_desc">Selección de barras proteicas (RXBAR, KIND, GoMacro), biltong, jerky y frutos secos.</p>
                 </div>
                 <div class="mt-4 pt-3 border-t border-gray-100 text-[11px] text-ranch-gold font-semibold uppercase tracking-wider" data-i18n="m2_tag">Alto rendimiento</div>
             </div>
 
-            <!-- Item 3 -->
             <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-200 flex flex-col justify-between">
                 <div>
                     <div class="flex justify-between items-start mb-2">
-                        <h3 class="font-serif font-bold text-lg text-ranch-dark" data-i18n="m3_name">Cervezas Artesanales & Coctelería Fría</h3>
+                        <h3 class="font-serif font-bold text-lg text-ranch-dark" data-i18n="m3_name">Cervezas Artesanales & Coctelería</h3>
                         <span class="text-ranch-green font-bold text-sm">$60 - $120 MXN</span>
                     </div>
-                    <p class="text-gray-600 text-xs" data-i18n="m3_desc">Cervezas artesanales locales frías, seltzers y bebidas refrescantes para disfrutar al finalizar tu sesión.</p>
+                    <p class="text-gray-600 text-xs" data-i18n="m3_desc">Cervezas artesanales locales frías, seltzers y bebidas refrescantes para finalizar tu sesión.</p>
                 </div>
                 <div class="mt-4 pt-3 border-t border-gray-100 text-[11px] text-ranch-gold font-semibold uppercase tracking-wider" data-i18n="m3_tag">Social & Refresh</div>
             </div>
@@ -396,10 +412,10 @@
                     <i class="fa-solid fa-shield-halved"></i>
                 </div>
                 <h3 class="font-serif text-2xl font-bold text-ranch-dark" data-i18n="staff_modal_title">Verificación de Personal</h3>
-                <p class="text-gray-500 text-xs mt-1" data-i18n="staff_modal_desc">Ingrese el nombre del cliente para verificar su pase activo en Santa Carmen.</p>
+                <p class="text-gray-500 text-xs mt-1" data-i18n="staff_modal_desc">Escanee o ingrese el nombre para verificar socio o pase activo en Santa Carmen.</p>
             </div>
             <div class="mb-4">
-                <input type="text" id="verify-search" placeholder="Buscar por nombre de invitado..." class="w-full bg-ranch-sand border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-ranch-green mb-3">
+                <input type="text" id="verify-search" placeholder="Buscar por nombre de socio o invitado..." class="w-full bg-ranch-sand border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-ranch-green mb-3">
                 <button onclick="verifyVisitor()" class="w-full bg-ranch-dark text-white font-bold py-3 rounded-xl text-xs hover:bg-ranch-green transition" data-i18n="btn_verify">Verificar Acceso</button>
             </div>
             <div id="verify-result" class="hidden p-4 rounded-xl bg-green-50 border border-green-200 text-center text-green-800 text-xs font-semibold"></div>
@@ -411,10 +427,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
             <div>
                 <span class="font-serif text-2xl font-bold tracking-wider text-ranch-sand">SANTA CARMEN</span>
-                <p class="text-gray-400 text-xs mt-1" data-i18n="footer_sub">Ranch & Experience Club • MastroGolf Programs</p>
+                <p class="text-gray-400 text-xs mt-1" data-i18n="footer_sub">Ranch & Experience Club • Golfzon WAVE Programs</p>
             </div>
             <div class="text-xs text-gray-400">
-                &copy; 2026 Santa Carmen. Todos los derechos reservados. El acceso es nuestro valor, la experiencia nuestra entrega.
+                &copy; 2026 Santa Carmen. Todos los derechos reservados.
             </div>
         </div>
     </footer>
@@ -427,148 +443,190 @@
 
         const translations = {
             es: {
+                nav_memberships: "Membresías",
+                nav_portal: "Portal Socios & QRs",
                 nav_experiences: "Experiencias",
-                nav_passes: "Pases & Acceso",
-                nav_calendar: "Calendario Hoy",
+                nav_passes: "Pases Diarios",
+                nav_calendar: "Calendario",
                 nav_menu: "Midway House",
                 staff_portal: "Staff Check-In",
                 hero_badge: "Acceso Exclusivo & Experiencias de Rancho",
                 hero_title_1: "Donde la Naturaleza",
                 hero_title_2: "Se Vive Sin Límites",
-                hero_subtitle: "Todo acceso requiere membresía o pase de entrada. Disfruta caballos, avituallamiento de atletas y los programas profesionales de MastroGolf.",
-                cta_pass: "Obtener Pase de Entrada ($150 MXN)",
-                cta_explore: "Explorar Experiencias",
-                access_banner: "Política de Acceso: Todo visitante adquiere un pase de entrada general al llegar ($150 MXN) o el Pase Todo Incluido ($1,800 MXN). El acceso es nuestro valor; la experiencia, nuestra entrega.",
+                hero_subtitle: "Disfruta caballos, avituallamiento de atletas, simuladores Golfzon WAVE y planes de membresía diseñados para tu estilo de vida.",
+                cta_memberships: "Ver Membresías Exclusivas",
+                cta_portal: "Acceso Socios (Generar Invitados)",
+                access_banner: "Operación Santa Carmen: Acceso exclusivo con membresía o pase diario. Las experiencias con coaches independientes se cobran en el sitio mediante dispositivos Point Air.",
+                mem_tag: "Comunidad & Lealtad",
+                mem_title: "Membresías Santa Carmen",
+                mem_desc: "Entrena diario, asegura tu espacio en Golfzon WAVE, disfruta el mundo ecuestre y forma parte de nuestra exclusiva comunidad.",
+                mem1_badge: "Individual / Pro",
+                mem1_name: "Athlete & Golf Club",
+                mem1_desc: "Diseñado para golfistas y atletas enfocados en su rendimiento diario con simuladores.",
+                per_month: "MXN / mes",
+                mem1_f1: "Acceso ilimitado diario individual sin pago de entrada",
+                mem1_f2: "8 horas mensuales de práctica en simulador Golfzon WAVE",
+                mem1_f3: "10% de descuento permanente en Midway House",
+                mem1_f4: "Tarifas preferenciales en clínicas MastroGolf",
+                btn_join_mem1: "Suscribirme (Mercado Pago)",
+                mem2_badge: "Estilo de Vida Campestre",
+                mem2_name: "Santa Carmen Family Club",
+                mem2_desc: "Acceso total para cónyuge, hijos menores y opción de integrar a hijos de 18 años.",
+                badge_best_value: "Familiar & VIP",
+                mem2_f1: "Acceso ilimitado titular + cónyuge + hijos menores de 18",
+                mem2_f2: "Opción Hijo 18+ / Estudiante: +$900 MXN/mes con QR independiente",
+                mem2_f3: "Acceso al mundo ecuestre y simuladores Golfzon WAVE",
+                mem2_f4: "$600 MXN de crédito mensual en Midway House incluidos",
+                btn_join_mem2: "Suscribirme (Mercado Pago)",
+                portal_tag: "Portal Exclusivo para Socios",
+                portal_title: "Genera Tus QRs de Invitado Mensuales",
+                portal_desc: "Ingresa tu correo de socio para generar al instante tus pases de cortesía (2 disponibles por mes).",
+                portal_email: "Correo Electrónico de Socio",
+                portal_guest_name: "Nombre Completo del Invitado",
+                btn_gen_guest: "Generar Pase de Invitado (QR)",
+                guest_notice: "¡Comparte este código QR o captura de pantalla con tu invitado para su acceso!",
                 exp_tag: "El Ecosistema Santa Carmen",
-                exp_title: "Experiencias A La Carta & Todo Incluido",
-                exp_desc: "Selecciona tu actividad favorita o libera todo el potencial del rancho con nuestro pase diario ilimitado.",
+                exp_title: "Experiencias, Equinos & Golfzon WAVE",
+                exp_desc: "Selecciona tu actividad favorita y paga de forma independiente con los dispositivos Point Air de nuestros instructores.",
                 badge_horses: "Equestrian",
-                badge_golf: "MastroGolf Programs",
+                badge_golf: "Golfzon WAVE",
                 badge_midway: "Midway House",
                 card1_title: "Mundo Ecuestre & Cuidado",
-                card1_desc: "Paseos guiados por senderos del rancho, sesiones de lavado, cuidado y conexión profunda con los equinos.",
+                card1_desc: "Paseos guiados por senderos del rancho y conexión con equinos. Paga con Point Air del coach.",
                 per_session: "por sesión",
-                card2_title: "MastroGolf & Práctica",
-                card2_desc: "Sesiones de práctica en range, clínicas especializadas y tecnología de simulación de alto rendimiento.",
+                card2_title: "Simulación & Golfzon WAVE",
+                card2_desc: "Práctica de alto rendimiento con tecnología Golfzon WAVE. Paga directo con el instructor.",
                 per_bucket: "por sesión / cubo",
                 card3_title: "Midway House & Snack Bar",
-                card3_desc: "Estación de avituallamiento para atletas: bebidas frías, electrolitos, snacks y avituallamiento express.",
+                card3_desc: "Estación de avituallamiento para atletas: bebidas frías, electrolitos y snacks. Paga con tarjeta o Point Air.",
                 card3_price: "Snacks & Bebidas a la Mano",
-                btn_select: "Seleccionar Actividad",
+                btn_coach_pay: "Pagar con Coach (Point Air)",
+                btn_view_menu: "Ver Productos",
                 cal_tag: "Programación del Día",
                 cal_title: "Calendario de Actividades",
-                status_active: "Actividades Abiertas",
-                cal_item1_title: "Clínica Matutina MastroGolf",
-                cal_item1_desc: "Alineación, swing biomechanics y práctica guiada con Trackman en bahías.",
-                cal_included: "Incluido en Día / $350",
-                cal_item2_title: "Ruta & Baño de Equinos",
-                cal_item2_desc: "Experiencia guiada de cabalgata y cuidado práctico de los caballos en los establos.",
-                cal_item3_title: "Midway House & Snack Break",
-                cal_item3_desc: "Recarga de electrolitos, bebidas frías y snacks de alto rendimiento para atletas.",
-                cal_item4_title: "Torneo Relámpago Match Play",
-                cal_item4_desc: "Competencia amistosa en simuladores y práctica libre al atardecer.",
-                pass_tag: "Genera Tu Acceso al Instante",
-                pass_title: "Selecciona Tu Pase de Entrada",
-                pass_desc: "Todo visitante paga su derecho de acceso a la propiedad. Elige entre la entrada general o el pase todo incluido.",
+                pass_tag: "Pago en Línea & Acceso QR",
+                pass_title: "Pase de Entrada Diario",
+                pass_desc: "Si no cuentas con membresía, adquiere tu pase diario en línea con Mercado Pago.",
                 pass1_name: "Pase de Entrada General",
-                pass1_desc: "Acceso básico a las instalaciones, áreas comunes y zonas de descanso.",
+                pass1_desc: "Acceso básico a las instalaciones y áreas comunes.",
                 per_day: "por día",
                 badge_recommended: "Recomendado",
-                pass2_name: "Pase Todo Incluido",
-                pass2_desc: "Acceso total: caballos, range de golf ilimitado, snacks en Midway House y alimentos todo el día.",
-                form_title: "Información del Visitante para Generar Pase QR",
+                pass2_name: "Pase Todo Incluido del Día",
+                pass2_desc: "Acceso total: caballos, range Golfzon WAVE y snacks todo el día.",
+                form_title: "Datos del Visitante & Pago con Mercado Pago",
                 form_name: "Nombre Completo",
                 form_phone: "Teléfono / WhatsApp",
-                btn_generate: "Generar Mi Pase Digital & Código QR",
+                btn_simulate_qr: "[Simular Pago Exitoso] Generar Mi QR de Acceso",
                 btn_save_pass: "Guardar / Capturar Pantalla",
                 menu_tag: "Avituallamiento & Athlete Fuel",
                 menu_title: "Midway House & Snack Bar",
-                menu_desc: "Productos populares y de alta calidad para atletas, golfistas y visitantes. Snacking rápido, cero esperas, 100% energía.",
+                menu_desc: "Productos populares y de alta calidad para atletas y visitantes. Snacking rápido, cero esperas, 100% energía.",
                 m1_name: "Hidratación & Electrolitos",
-                m1_desc: "Bebidas isotónicas premium, agua de coco natural, líquidos electrolíticos y cafés fríos en barra fría.",
+                m1_desc: "Bebidas isotónicas premium, agua de coco natural, líquidos electrolíticos y cafés fríos.",
                 m1_tag: "Energía instantánea",
                 m2_name: "Barras de Proteína & Energy Fuel",
-                m2_desc: "Selección de barras proteicas (RXBAR, KIND, GoMacro), biltong, jerky y frutos secos para el recorrido.",
+                m2_desc: "Selección de barras proteicas (RXBAR, KIND, GoMacro), biltong, jerky y frutos secos.",
                 m2_tag: "Alto rendimiento",
-                m3_name: "Cervezas Artesanales & Coctelería Fría",
-                m3_desc: "Cervezas artesanales locales frías, seltzers y bebidas refrescantes para disfrutar al finalizar tu sesión.",
+                m3_name: "Cervezas Artesanales & Coctelería",
+                m3_desc: "Cervezas artesanales locales frías, seltzers y bebidas refrescantes para finalizar tu sesión.",
                 m3_tag: "Social & Refresh",
                 staff_modal_title: "Verificación de Personal",
-                staff_modal_desc: "Ingrese el nombre del cliente para verificar su pase activo en Santa Carmen.",
+                staff_modal_desc: "Escanee o ingrese el nombre para verificar socio o pase activo en Santa Carmen.",
                 btn_verify: "Verificar Acceso",
-                footer_sub: "Ranch & Experience Club • MastroGolf Programs"
+                footer_sub: "Ranch & Experience Club • Golfzon WAVE Programs"
             },
             en: {
+                nav_memberships: "Memberships",
+                nav_portal: "Member Portal",
                 nav_experiences: "Experiences",
-                nav_passes: "Passes & Access",
-                nav_calendar: "Today's Calendar",
+                nav_passes: "Daily Passes",
+                nav_calendar: "Calendar",
                 nav_menu: "Midway House",
                 staff_portal: "Staff Check-In",
                 hero_badge: "Exclusive Access & Ranch Experiences",
                 hero_title_1: "Where Nature Meets",
                 hero_title_2: "Boundless Experience",
-                hero_subtitle: "All access requires a membership or entry pass. Enjoy horses, athlete refueling, and professional MastroGolf programs.",
-                cta_pass: "Get Entry Pass ($150 MXN)",
-                cta_explore: "Explore Experiences",
-                access_banner: "Access Policy: Every visitor acquires a general entry pass upon arrival ($150 MXN) or the All-Inclusive Pass ($1,800 MXN). Access is our value; experience is our delivery.",
+                hero_subtitle: "Enjoy horses, athlete refueling, Golfzon WAVE simulators, and membership plans designed for your lifestyle.",
+                cta_memberships: "View Exclusive Memberships",
+                cta_portal: "Member Access (Guest QRs)",
+                access_banner: "Santa Carmen Operations: Exclusive access via membership or daily pass. Independent coach experiences are paid on-site via Point Air.",
+                mem_tag: "Community & Loyalty",
+                mem_title: "Santa Carmen Memberships",
+                mem_desc: "Train daily, secure your Golfzon WAVE bay, enjoy the equestrian world, and become part of our exclusive community.",
+                mem1_badge: "Individual / Pro",
+                mem1_name: "Athlete & Golf Club",
+                mem1_desc: "Designed for golfers and athletes focused on daily performance with simulators.",
+                per_month: "MXN / mo",
+                mem1_f1: "Unlimited daily individual access with no entry fee",
+                mem1_f2: "8 monthly hours of Golfzon WAVE simulator practice",
+                mem1_f3: "10% permanent discount at Midway House",
+                mem1_f4: "Preferred rates on MastroGolf clinics",
+                btn_join_mem1: "Subscribe (Mercado Pago)",
+                mem2_badge: "Country Lifestyle",
+                mem2_name: "Santa Carmen Family Club",
+                mem2_desc: "Total access for spouse, minor children, and option to add 18+ dependents.",
+                badge_best_value: "Family & VIP",
+                mem2_f1: "Unlimited access holder + spouse + kids under 18",
+                mem2_f2: "Optional 18+ / Student Add-on: +$900 MXN/mo with independent QR",
+                mem2_f3: "Access to equestrian world and Golfzon WAVE simulators",
+                mem2_f4: "$600 MXN monthly Midway House credit included",
+                btn_join_mem2: "Subscribe (Mercado Pago)",
+                portal_tag: "Exclusive Member Portal",
+                portal_title: "Generate Your Monthly Guest QRs",
+                portal_desc: "Enter your member email to instantly generate complimentary guest passes (2 available per month).",
+                portal_email: "Member Email",
+                portal_guest_name: "Guest Full Name",
+                btn_gen_guest: "Generate Guest Pass (QR)",
+                guest_notice: "Share this QR code or screenshot with your guest for ranch access!",
                 exp_tag: "The Santa Carmen Ecosystem",
-                exp_title: "A La Carta & All-Inclusive Experiences",
-                exp_desc: "Select your favorite activity or unlock the full potential of the ranch with our unlimited daily pass.",
+                exp_title: "Experiences, Horses & Golfzon WAVE",
+                exp_desc: "Select your favorite activity and pay independently using our instructors' Point Air terminals.",
                 badge_horses: "Equestrian",
-                badge_golf: "MastroGolf Programs",
+                badge_golf: "Golfzon WAVE",
                 badge_midway: "Midway House",
                 card1_title: "Equestrian World & Care",
-                card1_desc: "Guided trail rides across the ranch, washing sessions, grooming, and deep connection with horses.",
+                card1_desc: "Guided trail rides across the ranch and connection with horses. Pay with coach's Point Air.",
                 per_session: "per session",
-                card2_title: "MastroGolf & Practice",
-                card2_desc: "Range practice sessions, specialized clinics, and high-performance simulation technology.",
+                card2_title: "Simulation & Golfzon WAVE",
+                card2_desc: "High-performance practice with Golfzon WAVE technology. Pay directly with the instructor.",
                 per_bucket: "per session / bucket",
                 card3_title: "Midway House & Snack Bar",
-                card3_desc: "Athlete refueling station: chilled drinks, electrolytes, quick snacks, and express grab-and-go fuel.",
+                card3_desc: "Athlete refueling station: chilled drinks, electrolytes, and quick snacks. Pay by card or Point Air.",
                 card3_price: "Snacks & Drinks Ready",
-                btn_select: "Select Activity",
+                btn_coach_pay: "Pay with Coach (Point Air)",
+                btn_view_menu: "View Products",
                 cal_tag: "Daily Schedule",
                 cal_title: "Activity Calendar",
-                status_active: "Open Activities",
-                cal_item1_title: "Morning MastroGolf Clinic",
-                cal_item1_desc: "Alignment, swing biomechanics, and guided Trackman bay practice.",
-                cal_included: "Included in Day / $350",
-                cal_item2_title: "Horse Trail & Wash",
-                cal_item2_desc: "Guided trail riding experience and practical stable horse care.",
-                cal_item3_title: "Midway House & Snack Break",
-                cal_item3_desc: "Electrolyte reload, cold beverages, and high-performance snacks for athletes.",
-                cal_item4_title: "Match Play Lightning Tournament",
-                cal_item4_desc: "Friendly simulator competition and sunset open practice.",
-                pass_tag: "Generate Your Access Instantly",
-                pass_title: "Select Your Entry Pass",
-                pass_desc: "Every visitor pays their right of access to the property. Choose between general entry or all-inclusive pass.",
+                pass_tag: "Online Pay & QR Access",
+                pass_title: "Daily Entry Pass",
+                pass_desc: "If you don't have a membership, get your daily pass online via Mercado Pago.",
                 pass1_name: "General Entry Pass",
-                pass1_desc: "Basic access to facilities, common areas, and relaxation zones.",
+                pass1_desc: "Basic access to facilities and common areas.",
                 per_day: "per day",
                 badge_recommended: "Recommended",
-                pass2_name: "All-Inclusive Pass",
-                pass2_desc: "Total access: horses, unlimited golf range, Midway House snacks, and food all day long.",
-                form_title: "Visitor Information for QR Pass",
+                pass2_name: "All-Inclusive Day Pass",
+                pass2_desc: "Total access: horses, Golfzon WAVE range, and snacks all day long.",
+                form_title: "Visitor Info & Mercado Pago Checkout",
                 form_name: "Full Name",
                 form_phone: "Phone / WhatsApp",
-                btn_generate: "Generate My Digital QR Pass",
+                btn_simulate_qr: "[Simulate Successful Payment] Generate My QR Pass",
                 btn_save_pass: "Save / Take Screenshot",
                 menu_tag: "Avituallamiento & Athlete Fuel",
                 menu_title: "Midway House & Snack Bar",
-                menu_desc: "Popular, high-quality grab-and-go products for athletes, golfers, and visitors. Quick snacking, zero wait, 100% energy.",
+                menu_desc: "Popular, high-quality grab-and-go products for athletes and visitors. Quick snacking, zero wait, 100% energy.",
                 m1_name: "Hydration & Electrolytes",
                 m1_desc: "Premium isotonic drinks, natural coconut water, electrolyte drinks, and cold brew coffees.",
                 m1_tag: "Instant Energy",
                 m2_name: "Protein Bars & Energy Fuel",
-                m2_desc: "Selection of protein bars (RXBAR, KIND, GoMacro), biltong, jerky, and trail mixes for the course.",
+                m2_desc: "Selection of protein bars (RXBAR, KIND, GoMacro), biltong, jerky, and trail mixes.",
                 m2_tag: "High Performance",
                 m3_name: "Craft Beers & Chilled Cocktails",
                 m3_desc: "Cold local craft beers, hard seltzers, and refreshing beverages to enjoy right after your session.",
                 m3_tag: "Social & Refresh",
                 staff_modal_title: "Staff Verification",
-                staff_modal_desc: "Enter guest name to verify active pass status at Santa Carmen.",
+                staff_modal_desc: "Scan or enter name to verify active member or pass status at Santa Carmen.",
                 btn_verify: "Verify Access",
-                footer_sub: "Ranch & Experience Club • MastroGolf Programs"
+                footer_sub: "Ranch & Experience Club • Golfzon WAVE Programs"
             }
         };
 
@@ -598,15 +656,20 @@
                 document.getElementById('check-all').className = "fa-solid fa-circle-check text-xl text-ranch-gold";
                 document.getElementById('check-general').className = "fa-solid fa-circle text-xl text-gray-500";
             }
+            document.getElementById('mp-button-text').innerText = `${currentLang === 'es' ? 'Pagar' : 'Pay'} ${selectedPassName} ($${selectedPassPrice} MXN) con Mercado Pago`;
         }
 
-        function selectExperience(expName, expPrice) {
-            selectedPassName = expName;
-            selectedPassPrice = expPrice;
-            document.getElementById('passes').scrollIntoView({ behavior: 'smooth' });
+        function payWithMercadoPago() {
+            const name = document.getElementById('visitor-name').value;
+            if(!name) {
+                alert(currentLang === 'es' ? 'Por favor ingresa tu nombre completo antes de continuar al pago.' : 'Please enter your full name before proceeding to payment.');
+                return;
+            }
+            alert(currentLang === 'es' ? `Redirigiendo a pasarela de Mercado Pago...` : `Redirecting to Mercado Pago checkout...`);
+            generateQRCodeSimulated();
         }
 
-        function generateQRCode() {
+        function generateQRCodeSimulated() {
             const name = document.getElementById('visitor-name').value;
             if(!name) {
                 alert(currentLang === 'es' ? 'Por favor ingrese su nombre completo.' : 'Please enter your full name.');
@@ -616,7 +679,7 @@
             const qrContainer = document.getElementById('qrcode-container');
             qrContainer.innerHTML = '';
 
-            const qrData = `SANTA CARMEN PASS: ${name} | Type: ${selectedPassName} | Price: $${selectedPassPrice} MXN | Date: 2026-10-26`;
+            const qrData = `SANTA CARMEN PASS: ${name} | Type: ${selectedPassName} | Price: $${selectedPassPrice} MXN | Status: PAID`;
             
             try {
                 const qr = qrcode(0, 'M');
@@ -628,11 +691,43 @@
             }
 
             const detailsText = currentLang === 'es' 
-                ? `<strong>Visitante:</strong> ${name} <br><strong>Pase:</strong> ${selectedPassName} ($${selectedPassPrice} MXN)<br><strong>Fecha de Validez:</strong> Lunes, 26 de Octubre, 2026<br><span class="text-green-600 font-bold">¡Acceso Autorizado a Santa Carmen!</span>`
-                : `<strong>Visitor:</strong> ${name} <br><strong>Pass:</strong> ${selectedPassName} ($${selectedPassPrice} MXN)<br><strong>Valid Date:</strong> Monday, October 26, 2026<br><span class="text-green-600 font-bold">Santa Carmen Access Authorized!</span>`;
+                ? `<strong>Visitante:</strong> ${name} <br><strong>Pase:</strong> ${selectedPassName} ($${selectedPassPrice} MXN)<br><span class="text-green-600 font-bold">¡Acceso Autorizado a Santa Carmen!</span>`
+                : `<strong>Visitor:</strong> ${name} <br><strong>Pass:</strong> ${selectedPassName} ($${selectedPassPrice} MXN)<br><span class="text-green-600 font-bold">Santa Carmen Access Authorized!</span>`;
 
             document.getElementById('pass-details-text').innerHTML = detailsText;
             document.getElementById('qr-result-box').classList.remove('hidden');
+            document.getElementById('qr-result-box').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function generateGuestQR() {
+            const email = document.getElementById('member-email').value;
+            const guestName = document.getElementById('guest-name').value;
+            
+            if(!email || !guestName) {
+                alert(currentLang === 'es' ? 'Por favor ingresa tu correo de socio y el nombre del invitado.' : 'Please enter your member email and guest name.');
+                return;
+            }
+
+            const container = document.getElementById('guest-qrcode-container');
+            container.innerHTML = '';
+
+            const qrData = `SANTA CARMEN GUEST PASS | Sponsor Email: ${email} | Guest: ${guestName} | Valid: 24h`;
+            
+            try {
+                const qr = qrcode(0, 'M');
+                qr.addData(qrData);
+                qr.make();
+                container.innerHTML = qr.createImgTag(5);
+            } catch(e) {
+                container.innerText = "QR Generation Error";
+            }
+
+            const details = currentLang === 'es'
+                ? `<strong>Socio Patrocinador:</strong> ${email}<br><strong>Invitado de Cortesía:</strong> ${guestName}<br><span class="text-green-700 font-bold">Pase de Invitado Mensual Válido (1 de 2 usados)</span>`
+                : `<strong>Sponsor Member:</strong> ${email}<br><strong>Complimentary Guest:</strong> ${guestName}<br><span class="text-green-700 font-bold">Valid Monthly Guest Pass (1 of 2 used)</span>`;
+
+            document.getElementById('guest-pass-details').innerHTML = details;
+            document.getElementById('guest-qr-result').classList.remove('hidden');
         }
 
         function openStaffModal() {
@@ -651,7 +746,7 @@
                 resBox.classList.remove('hidden');
                 return;
             }
-            resBox.innerHTML = `<i class="fa-solid fa-circle-check text-green-700 mr-1"></i> <strong>${query}</strong>: Pase Activo Verificado en Santa Carmen. Acceso Concedido.`;
+            resBox.innerHTML = `<i class="fa-solid fa-circle-check text-green-700 mr-1"></i> <strong>${query}</strong>: Socio / Pase Activo Verificado en Santa Carmen. Acceso Concedido.`;
             resBox.classList.remove('hidden');
         }
     </script>
