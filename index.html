@@ -1,696 +1,632 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MastroGolf & Ranch | Elite Luxury Resort Experience</title>
+    <title>Santa Carmen | Ranch & Experience Club</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- QR Code Generator Library -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        ranchGreen: '#142a20',
-                        ranchGreenLight: '#1b3b2b',
-                        ranchGold: '#c5a059',
-                        ranchGoldDark: '#a3813e',
-                        ranchDark: '#0d1311',
-                        ranchCream: '#fbf9f5',
-                        ranchCard: '#f3efe6',
-                        ranchBorder: '#e6ded0'
+                        ranch: {
+                            dark: '#1C2826',
+                            green: '#2D4A3E',
+                            gold: '#D4AF37',
+                            sand: '#F7F4EE',
+                            lightsand: '#FFFFFF',
+                            accent: '#C5A059'
+                        }
                     },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif']
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
                     }
                 }
             }
         }
     </script>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- QRCode Generator Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #fbf9f5; color: #0d1311; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F7F4EE; color: #1C2826; }
         .font-serif { font-family: 'Playfair Display', serif; }
-        .hero-gradient {
-            background: linear-gradient(135deg, rgba(13, 19, 17, 0.88) 0%, rgba(20, 42, 32, 0.8) 100%), url('https://placehold.co/1920x1080/142a20/c5a059?text=MastroGolf+%26+Ranch') center/cover no-repeat;
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(12px);
+        .hero-bg {
+            background: linear-gradient(rgba(28, 40, 38, 0.65), rgba(28, 40, 38, 0.75)), url('https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
         }
     </style>
 </head>
-<body class="antialiased min-h-screen flex flex-col justify-between selection:bg-ranchGold selection:text-white">
+<body class="bg-ranch-sand min-h-screen flex flex-col justify-between selection:bg-ranch-gold selection:text-white">
 
-    <!-- Top Navigation Bar -->
-    <header class="sticky top-0 z-50 bg-ranchDark/95 backdrop-blur-md text-white border-b border-ranchGold/20">
+    <!-- TOP NAVIGATION BAR -->
+    <header class="sticky top-0 z-50 bg-ranch-dark/95 backdrop-blur-md border-b border-ranch-gold/30 text-white shadow-xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand -->
             <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-xl bg-ranchGold flex items-center justify-center text-ranchDark font-serif font-bold text-xl shadow-lg">
-                    M
+                <div class="w-10 h-10 rounded-full bg-ranch-gold flex items-center justify-center text-ranch-dark font-serif font-bold text-xl shadow-lg">
+                    SC
                 </div>
                 <div>
-                    <span class="font-serif text-xl tracking-wide font-semibold text-white">MastroGolf</span>
-                    <span class="block text-[10px] uppercase tracking-widest text-ranchGold">Golf & Ranch Resort</span>
+                    <span class="font-serif text-2xl font-bold tracking-wider text-ranch-sand">SANTA CARMEN</span>
+                    <span class="block text-[10px] uppercase tracking-widest text-ranch-gold font-sans">Ranch & Experience Club</span>
                 </div>
             </div>
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
-                <a href="#experiences" class="hover:text-ranchGold transition-colors">Experiences</a>
-                <a href="#booking-engine" class="hover:text-ranchGold transition-colors">Pass Builder</a>
-                <a href="#menu" class="hover:text-ranchGold transition-colors">Kitchen & Bar</a>
-                <a href="#faq" class="hover:text-ranchGold transition-colors">Guest Guide</a>
-                <button onclick="openStaffModal()" class="text-ranchGold border border-ranchGold/40 px-4 py-2 rounded-xl hover:bg-ranchGold hover:text-ranchDark transition-all shadow-sm">
-                    <i class="fa-solid fa-id-card mr-2"></i> Staff Verification
-                </button>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
+                <a href="#experiences" class="hover:text-ranch-gold transition" data-i18n="nav_experiences">Experiencias</a>
+                <a href="#passes" class="hover:text-ranch-gold transition" data-i18n="nav_passes">Pases & Acceso</a>
+                <a href="#calendar" class="hover:text-ranch-gold transition" data-i18n="nav_calendar">Calendario Hoy</a>
+                <a href="#menu" class="hover:text-ranch-gold transition" data-i18n="nav_menu">Gastronomía</a>
             </nav>
-            <div class="md:hidden flex items-center space-x-3">
-                <button onclick="openStaffModal()" class="text-ranchGold p-2"><i class="fa-solid fa-id-card text-lg"></i></button>
-                <button onclick="toggleMobileMenu()" class="text-white focus:outline-none p-2">
-                    <i class="fa-solid fa-bars text-xl"></i>
+
+            <!-- Actions: Language Toggle & Staff Portal -->
+            <div class="flex items-center space-x-4">
+                <button onclick="toggleLanguage()" class="px-3 py-1.5 rounded-full border border-ranch-gold/50 text-xs font-semibold tracking-wider hover:bg-ranch-gold hover:text-ranch-dark transition">
+                    <span id="lang-label">EN / ES</span>
+                </button>
+                <button onclick="openStaffModal()" class="hidden sm:flex items-center space-x-2 bg-ranch-green border border-ranch-gold/40 px-4 py-2 rounded-lg text-xs font-semibold tracking-wider hover:bg-ranch-gold hover:text-ranch-dark transition shadow">
+                    <i class="fa-solid fa-lock text-ranch-gold"></i>
+                    <span data-i18n="staff_portal">Staff Check-In</span>
                 </button>
             </div>
-        </div>
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-ranchDark border-b border-ranchGold/20 px-4 pt-3 pb-5 space-y-3">
-            <a href="#experiences" class="block py-2 hover:text-ranchGold">Experiences</a>
-            <a href="#booking-engine" class="block py-2 hover:text-ranchGold">Pass Builder</a>
-            <a href="#menu" class="block py-2 hover:text-ranchGold">Kitchen & Bar</a>
-            <a href="#faq" class="block py-2 hover:text-ranchGold">Guest Guide</a>
-            <button onclick="openStaffModal()" class="w-full text-left py-2 text-ranchGold font-medium border-t border-gray-800 pt-3">
-                <i class="fa-solid fa-id-card mr-2"></i> Staff Verification Panel
-            </button>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="flex-grow">
+    <!-- HERO SECTION -->
+    <section class="hero-bg text-white py-24 md:py-32 relative flex items-center justify-center text-center">
+        <div class="max-w-4xl mx-auto px-4 z-10">
+            <span class="bg-ranch-gold/90 text-ranch-dark text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-6 inline-block shadow-md" data-i18n="hero_badge">
+                Acceso Exclusivo & Experiencias de Rancho
+            </span>
+            <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight text-ranch-sand">
+                <span data-i18n="hero_title_1">Donde la Naturaleza</span><br>
+                <span class="text-ranch-gold italic" data-i18n="hero_title_2">Se Vive Sin Límites</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-200 font-light max-w-2xl mx-auto mb-10 leading-relaxed" data-i18n="hero_subtitle">
+                Todo acceso requiere membresía o pase de entrada. Disfruta caballos, alta gastronomía, y los programas profesionales de MastroGolf.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#passes" class="w-full sm:w-auto bg-ranch-gold text-ranch-dark font-bold px-8 py-4 rounded-xl shadow-xl hover:bg-white transition text-center tracking-wide" data-i18n="cta_pass">
+                    Obtener Pase de Entrada ($150 MXN)
+                </a>
+                <a href="#experiences" class="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/30 text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/20 transition text-center tracking-wide" data-i18n="cta_explore">
+                    Explorar Experiencias
+                </a>
+            </div>
+        </div>
+    </section>
 
-        <!-- Hero Section -->
-        <section class="hero-gradient text-white py-28 md:py-40 px-4 text-center relative overflow-hidden">
-            <div class="max-w-4xl mx-auto space-y-6 relative z-10">
-                <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-ranchGold/20 border border-ranchGold/50 text-ranchGold text-xs uppercase tracking-widest font-semibold backdrop-blur-sm">
-                    <i class="fa-solid fa-calendar-days"></i>
-                    <span>Opening Monday, October 26, 2026</span>
-                </div>
-                <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-tight">
-                    Where Elite Golf Meets <span class="text-ranchGold italic">Ranch Luxury</span>
-                </h1>
-                <p class="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto font-light leading-relaxed">
-                    Immerse yourself in our frictionless resort ecosystem. Hit target-grade range balls, ride and groom majestic horses, and savor open-air culinary hospitality.
+    <!-- MANDATORY ACCESS FEE NOTICE BANNER -->
+    <section class="bg-ranch-green text-ranch-sand py-6 border-y border-ranch-gold/30">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-3">
+                <i class="fa-solid fa-ticket text-ranch-gold text-2xl"></i>
+                <p class="text-sm md:text-base font-medium" data-i18n="access_banner">
+                    <strong>Política de Acceso:</strong> Todo visitante adquiere un pase de entrada general al llegar ($150 MXN) o el Pase Todo Incluido ($1,800 MXN). El acceso es nuestro valor; la experiencia, nuestra entrega.
                 </p>
-                <div class="pt-6 flex flex-col sm:flex-row justify-center items-center gap-4">
-                    <a href="#booking-engine" class="w-full sm:w-auto px-8 py-4 bg-ranchGold text-ranchDark font-semibold rounded-xl shadow-xl hover:bg-opacity-90 transition-all text-base">
-                        <i class="fa-solid fa-ticket mr-2"></i> Secure Monday Day Pass ($1,800 MXN)
-                    </a>
-                    <a href="#experiences" class="w-full sm:w-auto px-8 py-4 bg-white/10 border border-white/30 text-white font-semibold rounded-xl hover:bg-white/20 transition-all text-base backdrop-blur-sm">
-                        Explore A La Carte Menu
-                    </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCES & MASTROGOLF SECTION -->
+    <section id="experiences" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-ranch-gold text-xs font-bold tracking-widest uppercase" data-i18n="exp_tag">El Ecosistema Santa Carmen</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-bold mt-2 text-ranch-dark" data-i18n="exp_title">Experiencias A La Carta & Todo Incluido</h2>
+            <p class="text-gray-600 mt-4 text-base" data-i18n="exp_desc">Selecciona tu actividad favorita o libera todo el potencial del rancho con nuestro pase diario ilimitado.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1: Equestrian -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200/80 flex flex-col justify-between group hover:shadow-2xl transition duration-300">
+                <div>
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=800&q=80" alt="Equestrian" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-4 right-4 bg-ranch-dark/80 backdrop-blur-md text-ranch-gold px-3 py-1 rounded-full text-xs font-semibold" data-i18n="badge_horses">
+                            Equestrian
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-2xl font-bold text-ranch-dark mb-2" data-i18n="card1_title">Mundo Ecuestre & Cuidado</h3>
+                        <p class="text-gray-600 text-sm mb-4" data-i18n="card1_desc">Paseos guiados por senderos del rancho, sesiones de lavado, cuidado y conexión profunda con los equinos.</p>
+                        <div class="text-ranch-green font-bold text-lg mb-4">$600 - $1,000 MXN <span class="text-xs font-normal text-gray-500" data-i18n="per_session">por sesión</span></div>
+                    </div>
+                </div>
+                <div class="px-6 pb-6">
+                    <button onclick="selectExperience('Equestrian Experience', 800)" class="w-full bg-ranch-dark text-ranch-sand py-3 rounded-xl font-semibold hover:bg-ranch-green transition text-sm" data-i18n="btn_select">
+                        Seleccionar Actividad
+                    </button>
                 </div>
             </div>
-            <!-- Decorative subtle background badge -->
-            <div class="absolute -bottom-10 -right-10 w-96 h-96 bg-ranchGold/5 rounded-full blur-3xl pointer-events-none"></div>
-        </section>
 
-        <!-- Live Status Bar -->
-        <div class="bg-ranchGreen text-white py-3 px-4 border-b border-ranchGold/20">
-            <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-xs sm:text-sm gap-2">
-                <div class="flex items-center space-x-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                    <span class="font-medium">Active Reservation Window: Monday, Oct 26, 2026 (Open 7:00 AM – Sunset)</span>
+            <!-- Card 2: MastroGolf -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200/80 flex flex-col justify-between group hover:shadow-2xl transition duration-300">
+                <div>
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&fit=crop&w=800&q=80" alt="MastroGolf" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-4 right-4 bg-ranch-dark/80 backdrop-blur-md text-ranch-gold px-3 py-1 rounded-full text-xs font-semibold" data-i18n="badge_golf">
+                            MastroGolf Programs
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-2xl font-bold text-ranch-dark mb-2" data-i18n="card2_title">MastroGolf & Práctica</h3>
+                        <p class="text-gray-600 text-sm mb-4" data-i18n="card2_desc">Sesiones de práctica en range, clínicas especializadas y tecnología de simulación de alto rendimiento.</p>
+                        <div class="text-ranch-green font-bold text-lg mb-4">$350 - $500 MXN <span class="text-xs font-normal text-gray-500" data-i18n="per_bucket">por sesión / cubo</span></div>
+                    </div>
                 </div>
-                <div class="flex items-center space-x-6 text-ranchGold">
-                    <span><i class="fa-solid fa-golf-ball-tee mr-1"></i> Range Ready</span>
-                    <span><i class="fa-solid fa-horse-head mr-1"></i> Stables Open</span>
-                    <span><i class="fa-solid fa-utensils mr-1"></i> Kitchen Active</span>
+                <div class="px-6 pb-6">
+                    <button onclick="selectExperience('MastroGolf Range & Session', 400)" class="w-full bg-ranch-dark text-ranch-sand py-3 rounded-xl font-semibold hover:bg-ranch-green transition text-sm" data-i18n="btn_select">
+                        Seleccionar Actividad
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 3: Gastronomy & Drinks -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200/80 flex flex-col justify-between group hover:shadow-2xl transition duration-300">
+                <div>
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Gastronomy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-4 right-4 bg-ranch-dark/80 backdrop-blur-md text-ranch-gold px-3 py-1 rounded-full text-xs font-semibold" data-i18n="badge_fb">
+                            Gastronomía & Bar
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-2xl font-bold text-ranch-dark mb-2" data-i18n="card3_title">Cocina del Rancho & Bar</h3>
+                        <p class="text-gray-600 text-sm mb-4" data-i18n="card3_desc">Bebidas artesanales, coctelería y platillos campestres preparados al momento con ingredientes locales.</p>
+                        <div class="text-ranch-green font-bold text-lg mb-4" data-i18n="card3_price">A La Carta o Incluido</div>
+                    </div>
+                </div>
+                <div class="px-6 pb-6">
+                    <button onclick="selectExperience('Rancho Dining & Drinks', 500)" class="w-full bg-ranch-dark text-ranch-sand py-3 rounded-xl font-semibold hover:bg-ranch-green transition text-sm" data-i18n="btn_select">
+                        Seleccionar Actividad
+                    </button>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- Experiences Showcase Section -->
-        <section id="experiences" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                <span class="text-ranchGold font-semibold text-xs uppercase tracking-widest">Curated Offerings</span>
-                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-ranchDark">The MastroExperience Portfolio</h2>
-                <p class="text-gray-600">Choose our frictionless All-Inclusive Day Pass or pick your desired activities a la carte.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm border border-ranchBorder hover:shadow-xl transition-all flex flex-col justify-between group">
-                    <div>
-                        <div class="w-14 h-14 rounded-2xl bg-ranchGreen/10 text-ranchGreen flex items-center justify-center text-2xl mb-6 group-hover:bg-ranchGold group-hover:text-ranchDark transition-colors">
-                            <i class="fa-solid fa-golf-ball-tee"></i>
-                        </div>
-                        <h3 class="font-serif text-2xl font-bold text-ranchDark mb-3">Golf & Precision Range</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
-                            Target-rich bays, pristine turf, alignment markers, and premium range balls designed for quality feedback rather than mindless hitting.
-                        </p>
-                    </div>
-                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
-                        <span class="text-xs uppercase tracking-wider text-gray-400 font-semibold">A La Carte</span>
-                        <span class="font-serif text-xl font-bold text-ranchGreen">$450 MXN <span class="text-xs font-sans text-gray-500 font-normal">($25 USD)</span></span>
-                    </div>
+    <!-- INTERACTIVE DAILY ACTIVITY CALENDAR -->
+    <section id="calendar" class="py-20 bg-white border-y border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between mb-12">
+                <div>
+                    <span class="text-ranch-gold text-xs font-bold tracking-widest uppercase" data-i18n="cal_tag">Programación del Día</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-1 text-ranch-dark" data-i18n="cal_title">Calendario de Actividades (Hoy)</h2>
+                    <p class="text-gray-600 text-sm mt-1" id="current-date-display">Lunes, 26 de Octubre, 2026</p>
                 </div>
-
-                <!-- Card 2 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm border border-ranchBorder hover:shadow-xl transition-all flex flex-col justify-between group">
-                    <div>
-                        <div class="w-14 h-14 rounded-2xl bg-ranchGold/10 text-ranchGold flex items-center justify-center text-2xl mb-6 group-hover:bg-ranchGold group-hover:text-ranchDark transition-colors">
-                            <i class="fa-solid fa-horse-head"></i>
-                        </div>
-                        <h3 class="font-serif text-2xl font-bold text-ranchDark mb-3">Equestrian & Stables</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
-                            Guided trail rides across ranch acreage, horse grooming sessions, and interactive wash experiences with majestic trained horses.
-                        </p>
-                    </div>
-                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
-                        <span class="text-xs uppercase tracking-wider text-gray-400 font-semibold">A La Carte</span>
-                        <span class="font-serif text-xl font-bold text-ranchGreen">$900 MXN <span class="text-xs font-sans text-gray-500 font-normal">($50 USD)</span></span>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm border border-ranchBorder hover:shadow-xl transition-all flex flex-col justify-between group">
-                    <div>
-                        <div class="w-14 h-14 rounded-2xl bg-ranchGreen/10 text-ranchGreen flex items-center justify-center text-2xl mb-6 group-hover:bg-ranchGold group-hover:text-ranchDark transition-colors">
-                            <i class="fa-solid fa-utensils"></i>
-                        </div>
-                        <h3 class="font-serif text-2xl font-bold text-ranchDark mb-3">Kitchen & Bar Hospitality</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
-                            Wood-fired ranch bites, artisanal cocktails, cold craft beers, and refreshments served at the clubhouse patio with panoramic views.
-                        </p>
-                    </div>
-                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
-                        <span class="text-xs uppercase tracking-wider text-gray-400 font-semibold">A La Carte</span>
-                        <span class="font-serif text-xl font-bold text-ranchGreen">Menu Pricing</span>
-                    </div>
+                <div class="mt-4 md:mt-0 flex items-center space-x-3">
+                    <span class="bg-ranch-sand px-4 py-2 rounded-xl text-xs font-semibold text-ranch-dark border border-ranch-gold/30">
+                        <i class="fa-solid fa-circle text-green-600 mr-1.5 text-[10px]"></i> <span data-i18n="status_active">Actividades Abiertas</span>
+                    </span>
                 </div>
             </div>
-        </section>
 
-        <!-- Interactive Pass & Booking Engine Section -->
-        <section id="booking-engine" class="bg-ranchCard py-24 border-y border-ranchBorder">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                    <span class="text-ranchGold font-semibold text-xs uppercase tracking-widest">Frictionless Check-In System</span>
-                    <h2 class="font-serif text-3xl sm:text-5xl font-bold text-ranchDark">Build Your Monday Experience</h2>
-                    <p class="text-gray-600">Select our All-Inclusive VIP Day Pass for absolute freedom, or customize your a la carte selection below.</p>
+            <!-- Calendar Schedule Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <!-- Slot 1 -->
+                <div class="bg-ranch-sand rounded-2xl p-6 border border-ranch-gold/30 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-bold text-ranch-gold uppercase tracking-wider">09:00 AM - 11:00 AM</span>
+                        <h3 class="font-serif text-xl font-bold text-ranch-dark mt-2" data-i18n="cal_item1_title">Clínica Matutina MastroGolf</h3>
+                        <p class="text-gray-600 text-xs mt-2" data-i18n="cal_item1_desc">Alineación, swing biomechanics y práctica guiada con Trackman en bahías.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-300 flex items-center justify-between text-xs font-semibold text-ranch-green">
+                        <span data-i18n="cal_included">Incluido en Día / $350</span>
+                        <i class="fa-solid fa-golf-ball-tee"></i>
+                    </div>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                    
-                    <!-- Left: Pass Selector (8 Cols) -->
-                    <div class="lg:col-span-8 space-y-6">
-                        
-                        <!-- Option 1: All-Inclusive Day Pass -->
-                        <div id="card-all" onclick="selectPassMode('all')" class="bg-white p-6 sm:p-8 rounded-2xl border-2 border-ranchGold shadow-md cursor-pointer transition-all relative overflow-hidden">
-                            <div class="absolute top-0 right-0 bg-ranchGold text-ranchDark text-xs uppercase tracking-widest font-bold px-4 py-1.5 rounded-bl-xl shadow-sm">
-                                Recommended Best Value
-                            </div>
-                            <div class="flex items-start space-x-4">
-                                <div class="flex items-center h-6 mt-1">
-                                    <input id="radio-all" name="mode" type="radio" checked class="w-5 h-5 text-ranchGold accent-ranchGold focus:ring-ranchGold">
-                                </div>
-                                <div class="flex-grow">
-                                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
-                                        <h3 class="font-serif text-2xl font-bold text-ranchDark">The All-Inclusive Ranch Day Pass</h3>
-                                        <span class="font-serif text-2xl font-bold text-ranchGreen">$1,800 MXN <span class="text-sm font-sans font-normal text-gray-500">($100 USD)</span></span>
-                                    </div>
-                                    <p class="text-gray-600 text-sm mb-6 leading-relaxed">
-                                        Ultimate unhurried luxury. Includes unlimited range golf practice, full equestrian trail rides & horse washing sessions, plus an open food & drink menu all day long.
-                                    </p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="inline-flex items-center text-xs bg-ranchGreen/10 text-ranchGreen px-3 py-1.5 rounded-full font-medium"><i class="fa-solid fa-check mr-1.5"></i> Unlimited Golf Range</span>
-                                        <span class="inline-flex items-center text-xs bg-ranchGreen/10 text-ranchGreen px-3 py-1.5 rounded-full font-medium"><i class="fa-solid fa-check mr-1.5"></i> Full Equestrian & Wash</span>
-                                        <span class="inline-flex items-center text-xs bg-ranchGreen/10 text-ranchGreen px-3 py-1.5 rounded-full font-medium"><i class="fa-solid fa-check mr-1.5"></i> Open F&B Kitchen</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Option 2: A La Carte Builder -->
-                        <div id="card-alacarte" onclick="selectPassMode('alacarte')" class="bg-white p-6 sm:p-8 rounded-2xl border-2 border-ranchBorder shadow-sm cursor-pointer transition-all">
-                            <div class="flex items-start space-x-4">
-                                <div class="flex items-center h-6 mt-1">
-                                    <input id="radio-alacarte" name="mode" type="radio" class="w-5 h-5 text-ranchGold accent-ranchGold focus:ring-ranchGold">
-                                </div>
-                                <div class="flex-grow">
-                                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
-                                        <h3 class="font-serif text-2xl font-bold text-ranchDark">A La Carte Custom Experience</h3>
-                                        <span class="text-xs uppercase tracking-widest text-gray-500 font-semibold">Mix & Match Menu</span>
-                                    </div>
-                                    <p class="text-gray-600 text-sm mb-6">
-                                        Select exact individual experiences if you are dropping in for a specific focus session.
-                                    </p>
-
-                                    <!-- Interactive Checkboxes -->
-                                    <div id="alacarte-options" class="space-y-3 opacity-50 pointer-events-none transition-opacity">
-                                        <label class="flex items-center justify-between p-4 rounded-xl bg-gray-50 border border-gray-200 cursor-pointer hover:border-ranchGold transition-all">
-                                            <div class="flex items-center space-x-3">
-                                                <input type="checkbox" value="450" data-name="Golf Range Session" onchange="updateCalculator()" class="w-4 h-4 text-ranchGold accent-ranchGold rounded">
-                                                <div>
-                                                    <span class="text-sm font-bold text-ranchDark block">Golf Range Hitting Session</span>
-                                                    <span class="text-xs text-gray-500">Includes target alignment & bucket allocation</span>
-                                                </div>
-                                            </div>
-                                            <span class="font-serif font-bold text-ranchGreen">$450 MXN</span>
-                                        </label>
-
-                                        <label class="flex items-center justify-between p-4 rounded-xl bg-gray-50 border border-gray-200 cursor-pointer hover:border-ranchGold transition-all">
-                                            <div class="flex items-center space-x-3">
-                                                <input type="checkbox" value="900" data-name="Equestrian Trail Ride & Wash" onchange="updateCalculator()" class="w-4 h-4 text-ranchGold accent-ranchGold rounded">
-                                                <div>
-                                                    <span class="text-sm font-bold text-ranchDark block">Equestrian Trail Ride & Groom/Wash</span>
-                                                    <span class="text-xs text-gray-500">Guided ride and hands-on stable care</span>
-                                                </div>
-                                            </div>
-                                            <span class="font-serif font-bold text-ranchGreen">$900 MXN</span>
-                                        </label>
-
-                                        <label class="flex items-center justify-between p-4 rounded-xl bg-gray-50 border border-gray-200 cursor-pointer hover:border-ranchGold transition-all">
-                                            <div class="flex items-center space-x-3">
-                                                <input type="checkbox" value="600" data-name="F&B Clubhouse Voucher" onchange="updateCalculator()" class="w-4 h-4 text-ranchGold accent-ranchGold rounded">
-                                                <div>
-                                                    <span class="text-sm font-bold text-ranchDark block">Kitchen & Bar Starter Credit</span>
-                                                    <span class="text-xs text-gray-500">Redeemable for tacos, burgers & craft drinks</span>
-                                                </div>
-                                            </div>
-                                            <span class="font-serif font-bold text-ranchGreen">$600 MXN</span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                <!-- Slot 2 -->
+                <div class="bg-ranch-sand rounded-2xl p-6 border border-ranch-gold/30 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-bold text-ranch-gold uppercase tracking-wider">11:30 AM - 01:00 PM</span>
+                        <h3 class="font-serif text-xl font-bold text-ranch-dark mt-2" data-i18n="cal_item2_title">Ruta & Baño de Equinos</h3>
+                        <p class="text-gray-600 text-xs mt-2" data-i18n="cal_item2_desc">Experiencia guiada de cabalgata y cuidado práctico de los caballos en los establos.</p>
                     </div>
+                    <div class="mt-6 pt-4 border-t border-gray-300 flex items-center justify-between text-xs font-semibold text-ranch-green">
+                        <span data-i18n="cal_included">Incluido en Día / $600</span>
+                        <i class="fa-solid fa-horse"></i>
+                    </div>
+                </div>
 
-                    <!-- Right: Summary & Checkout (4 Cols) -->
-                    <div class="lg:col-span-4 bg-white p-6 sm:p-8 rounded-2xl border border-ranchBorder shadow-lg space-y-6 sticky top-28">
-                        <h3 class="font-serif text-xl font-bold text-ranchDark border-b border-gray-100 pb-4">Pass Summary</h3>
-                        
-                        <div class="space-y-4">
-                            <div>
-                                <label class="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">Guest Full Name</label>
-                                <input type="text" id="input-guest-name" placeholder="e.g. Fernando Mastro" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-ranchGold text-sm font-medium">
-                            </div>
+                <!-- Slot 3 -->
+                <div class="bg-ranch-sand rounded-2xl p-6 border border-ranch-gold/30 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-bold text-ranch-gold uppercase tracking-wider">02:00 PM - 04:00 PM</span>
+                        <h3 class="font-serif text-xl font-bold text-ranch-dark mt-2" data-i18n="cal_item3_title">Almuerzo Campestre & Coctel</h3>
+                        <p class="text-gray-600 text-xs mt-2" data-i18n="cal_item3_desc">Gastronomía abierta del rancho con barra de bebidas artesanales en la casa club.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-300 flex items-center justify-between text-xs font-semibold text-ranch-green">
+                        <span data-i18n="cal_included">Incluido en Día / A la carta</span>
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                </div>
 
-                            <div>
-                                <label class="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">Reservation Date</label>
-                                <input type="text" value="Monday, October 26, 2026" disabled class="w-full px-4 py-3 rounded-xl bg-gray-100 border border-gray-200 text-gray-600 text-sm">
-                            </div>
+                <!-- Slot 4 -->
+                <div class="bg-ranch-sand rounded-2xl p-6 border border-ranch-gold/30 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-bold text-ranch-gold uppercase tracking-wider">04:30 PM - 06:30 PM</span>
+                        <h3 class="font-serif text-xl font-bold text-ranch-dark mt-2" data-i18n="cal_item4_title">Torneo Relámpago Match Play</h3>
+                        <p class="text-gray-600 text-xs mt-2" data-i18n="cal_item4_desc">Competencia amistosa en simuladores y práctica libre al atardecer.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-300 flex items-center justify-between text-xs font-semibold text-ranch-green">
+                        <span data-i18n="cal_included">Incluido en Día</span>
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                            <div class="pt-4 border-t border-gray-100 space-y-3">
-                                <div class="flex justify-between text-sm text-gray-600">
-                                    <span id="summary-title" class="font-medium">All-Inclusive Day Pass</span>
-                                    <span id="summary-price" class="font-semibold">$1,800 MXN</span>
-                                </div>
-                                <div class="flex justify-between text-lg font-bold text-ranchDark pt-3 border-t border-dashed border-gray-200">
-                                    <span>Total Investment</span>
-                                    <span id="summary-total" class="text-ranchGreen">$1,800 MXN</span>
-                                </div>
-                            </div>
-                        </div>
+    <!-- PASSES & DIGITAL CHECK-IN GENERATOR -->
+    <section id="passes" class="py-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-ranch-dark text-white rounded-3xl p-8 sm:p-12 shadow-2xl border border-ranch-gold/40 relative overflow-hidden">
+            <div class="absolute -right-16 -top-16 w-64 h-64 bg-ranch-gold/10 rounded-full blur-3xl pointer-events-none"></div>
 
-                        <button onclick="generateDigitalPass()" class="w-full py-4 bg-ranchGreen text-white font-semibold rounded-xl shadow-lg hover:bg-opacity-90 transition-all text-center flex items-center justify-center space-x-2">
-                            <i class="fa-solid fa-qrcode"></i>
-                            <span>Generate Digital Pass & QR</span>
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-ranch-gold text-xs font-bold tracking-widest uppercase" data-i18n="pass_tag">Genera Tu Acceso al Instante</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-2 text-ranch-sand" data-i18n="pass_title">Selecciona Tu Pase de Entrada</h2>
+                <p class="text-gray-300 text-sm mt-3" data-i18n="pass_desc">Todo visitante paga su derecho de acceso a la propiedad. Elige entre la entrada general o el pase todo incluido.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                <!-- Option 1: General Entrance Fee -->
+                <div onclick="selectPassType('General Entry', 150)" id="card-general" class="bg-white/5 border-2 border-ranch-gold/40 rounded-2xl p-6 cursor-pointer hover:bg-white/10 transition duration-300 relative">
+                    <div class="absolute top-4 right-4 text-ranch-gold"><i class="fa-solid fa-circle-check text-xl" id="check-general"></i></div>
+                    <h3 class="font-serif text-2xl font-bold text-ranch-sand mb-1" data-i18n="pass1_name">Pase de Entrada General</h3>
+                    <p class="text-gray-300 text-xs mb-4" data-i18n="pass1_desc">Acceso básico a las instalaciones, áreas comunes y zonas de descanso.</p>
+                    <div class="text-ranch-gold font-bold text-2xl">$150 MXN <span class="text-xs text-gray-400 font-normal" data-i18n="per_day">por día</span></div>
+                </div>
+
+                <!-- Option 2: All Inclusive Day Pass -->
+                <div onclick="selectPassType('All-Inclusive Day Pass', 1800)" id="card-all" class="bg-ranch-gold/20 border-2 border-ranch-gold rounded-2xl p-6 cursor-pointer hover:bg-ranch-gold/30 transition duration-300 relative shadow-lg">
+                    <span class="bg-ranch-gold text-ranch-dark text-[10px] font-bold px-3 py-0.5 rounded-full uppercase absolute -top-3 left-6" data-i18n="badge_recommended">Recomendado</span>
+                    <div class="absolute top-4 right-4 text-ranch-gold"><i class="fa-solid fa-circle-check text-xl" id="check-all"></i></div>
+                    <h3 class="font-serif text-2xl font-bold text-ranch-sand mb-1" data-i18n="pass2_name">Pase Todo Incluido</h3>
+                    <p class="text-gray-300 text-xs mb-4" data-i18n="pass2_desc">Acceso total: caballos, range de golf ilimitado, y alimentos/bebidas todo el día.</p>
+                    <div class="text-ranch-gold font-bold text-2xl">$1,800 MXN <span class="text-xs text-gray-400 font-normal" data-i18n="per_day">por día</span></div>
+                </div>
+            </div>
+
+            <!-- Pass Form & QR Generator -->
+            <div class="bg-white text-ranch-dark rounded-2xl p-6 sm:p-8">
+                <h3 class="font-serif text-xl font-bold mb-4" data-i18n="form_title">Información del Visitante para Generar Pase QR</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-700 uppercase mb-1" data-i18n="form_name">Nombre Completo</label>
+                        <input type="text" id="visitor-name" placeholder="Ej. Daniela Martinez" class="w-full bg-ranch-sand border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-ranch-green">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-700 uppercase mb-1" data-i18n="form_phone">Teléfono / WhatsApp</label>
+                        <input type="text" id="visitor-phone" placeholder="Ej. +52 686 000 0000" class="w-full bg-ranch-sand border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-ranch-green">
+                    </div>
+                </div>
+
+                <button onclick="generateQRCode()" class="w-full bg-ranch-green text-white font-bold py-4 rounded-xl hover:bg-ranch-dark transition text-center shadow-lg" data-i18n="btn_generate">
+                    Generar Mi Pase Digital & Código QR
+                </button>
+
+                <!-- QR Result Container (Hidden Initially) -->
+                <div id="qr-result-box" class="hidden mt-8 pt-8 border-t border-gray-200 text-center">
+                    <div class="inline-block bg-white p-4 rounded-2xl shadow-xl border border-gray-200 mb-4">
+                        <div id="qrcode-container" class="flex justify-center"></div>
+                    </div>
+                    <div id="pass-details-text" class="text-sm font-medium text-gray-700 mb-4"></div>
+                    <div class="flex flex-col sm:flex-row justify-center gap-3">
+                        <button onclick="alert('¡Pase guardado! Muestra este código QR en la entrada de Santa Carmen.')" class="bg-ranch-gold text-ranch-dark font-bold px-6 py-2.5 rounded-xl text-xs hover:bg-ranch-dark hover:text-white transition" data-i18n="btn_save_pass">
+                            Guardar / Capturar Pantalla
                         </button>
-                        
-                        <p class="text-center text-xs text-gray-400">
-                            <i class="fa-solid fa-shield-halved mr-1"></i> Instant digital wristband issued upon confirmation.
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Kitchen & Bar Menu Section -->
-        <section id="menu" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                <span class="text-ranchGold font-semibold text-xs uppercase tracking-widest">Culinary Excellence</span>
-                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-ranchDark">Clubhouse Kitchen & Bar</h2>
-                <p class="text-gray-600">Included fully in the All-Inclusive Day Pass or orderable a la carte.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Menu Item -->
-                <div class="bg-white p-6 rounded-2xl border border-ranchBorder shadow-sm flex justify-between items-start">
-                    <div>
-                        <h4 class="font-serif font-bold text-lg text-ranchDark">Wood-Fired Ribeye Tacos</h4>
-                        <p class="text-xs text-gray-500 mt-1">Prime angus beef, handmade corn tortillas, charred salsa.</p>
-                    </div>
-                    <span class="font-serif font-bold text-ranchGreen">$280 MXN</span>
-                </div>
-                <!-- Menu Item -->
-                <div class="bg-white p-6 rounded-2xl border border-ranchBorder shadow-sm flex justify-between items-start">
-                    <div>
-                        <h4 class="font-serif font-bold text-lg text-ranchDark">Craft Mezcal Margarita</h4>
-                        <p class="text-xs text-gray-500 mt-1">Oaxacan artisanal mezcal, fresh lime juice, agave, tajín.</p>
-                    </div>
-                    <span class="font-serif font-bold text-ranchGreen">$220 MXN</span>
-                </div>
-                <!-- Menu Item -->
-                <div class="bg-white p-6 rounded-2xl border border-ranchBorder shadow-sm flex justify-between items-start">
-                    <div>
-                        <h4 class="font-serif font-bold text-lg text-ranchDark">Ranch House Smash Burger</h4>
-                        <p class="text-xs text-gray-500 mt-1">Double patty, aged cheddar, bacon jam, brioche bun.</p>
-                    </div>
-                    <span class="font-serif font-bold text-ranchGreen">$260 MXN</span>
-                </div>
-                <!-- Menu Item -->
-                <div class="bg-white p-6 rounded-2xl border border-ranchBorder shadow-sm flex justify-between items-start">
-                    <div>
-                        <h4 class="font-serif font-bold text-lg text-ranchDark">Artisanal Cold Brew</h4>
-                        <p class="text-xs text-gray-500 mt-1">Slow-steeped single-origin Mexican coffee beans.</p>
-                    </div>
-                    <span class="font-serif font-bold text-ranchGreen">$90 MXN</span>
-                </div>
-                <!-- Menu Item -->
-                <div class="bg-white p-6 rounded-2xl border border-ranchBorder shadow-sm flex justify-between items-start">
-                    <div>
-                        <h4 class="font-serif font-bold text-lg text-ranchDark">Local Craft Cerveza</h4>
-                        <p class="text-xs text-gray-500 mt-1">Cold draft IPA or amber lager from Baja craft brewers.</p>
-                    </div>
-                    <span class="font-serif font-bold text-ranchGreen">$110 MXN</span>
-                </div>
-                <!-- Menu Item -->
-                <div class="bg-white p-6 rounded-2xl border border-ranchBorder shadow-sm flex justify-between items-start">
-                    <div>
-                        <h4 class="font-serif font-bold text-lg text-ranchDark">Fresh Guacamole & Totopos</h4>
-                        <p class="text-xs text-gray-500 mt-1">Hass avocados, serrano chiles, warm homemade chips.</p>
-                    </div>
-                    <span class="font-serif font-bold text-ranchGreen">$180 MXN</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Guest Guide FAQ Section -->
-        <section id="faq" class="bg-ranchCard py-24 border-t border-ranchBorder">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-                <div class="text-center space-y-3">
-                    <span class="text-ranchGold font-semibold text-xs uppercase tracking-widest">Everything You Need To Know</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ranchDark">Monday Guest Guide</h2>
-                </div>
-
-                <div class="space-y-4">
-                    <div class="bg-white p-6 rounded-2xl border border-ranchBorder shadow-sm">
-                        <h4 class="font-serif font-bold text-lg text-ranchDark mb-2">How does the All-Inclusive Day Pass work?</h4>
-                        <p class="text-sm text-gray-600 leading-relaxed">When you arrive on Monday, present your digital QR pass at the gate. You will receive your VIP Gold Wristband giving you unlimited access to hitting range balls, equestrian trail rides and horse washing, and ordering whatever you want from the kitchen and bar without ever opening your wallet.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl border border-ranchBorder shadow-sm">
-                        <h4 class="font-serif font-bold text-lg text-ranchDark mb-2">Can I bring my own golf clubs?</h4>
-                        <p class="text-sm text-gray-600 leading-relaxed">Yes, absolutely. However, we also provide professional demo sets at the range station if you prefer to travel light.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl border border-ranchBorder shadow-sm">
-                        <h4 class="font-serif font-bold text-lg text-ranchDark mb-2">What should I wear for the equestrian experiences?</h4>
-                        <p class="text-sm text-gray-600 leading-relaxed">We recommend comfortable closed-toe shoes (boots or sneakers), long pants for riding comfort, and casual resort or western attire.</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
+    <!-- RESTAURANT & BAR MENU PREVIEW -->
+    <section id="menu" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-ranch-gold text-xs font-bold tracking-widest uppercase" data-i18n="menu_tag">Cocina Campestre & Bar</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-2 text-ranch-dark" data-i18n="menu_title">Menú Gastronómico Destacado</h2>
+            <p class="text-gray-600 mt-2 text-sm" data-i18n="menu_desc">Incluido sin límite con tu Pase Todo Incluido, o disponible a la carta para visitantes con pase general.</p>
+        </div>
 
-    <!-- Footer -->
-    <footer class="bg-ranchDark text-white py-12 border-t border-ranchGold/20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex items-center space-x-3">
-                <div class="w-8 h-8 rounded-xl bg-ranchGold flex items-center justify-center text-ranchDark font-serif font-bold text-sm">
-                    M
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-200">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-serif font-bold text-lg text-ranch-dark" data-i18n="m1_name">Desayuno Campestre Santa Carmen</h3>
+                    <span class="text-ranch-green font-bold text-sm">$220 MXN</span>
                 </div>
-                <span class="font-serif text-lg tracking-wide text-white">MastroGolf & Ranch Resort</span>
+                <p class="text-gray-600 text-xs" data-i18n="m1_desc">Huevos orgánicos de rancho, frijoles de la olla, queso fresco artesanal, tortillas hechas a mano y café de olla.</p>
             </div>
-            <p class="text-xs text-gray-400 text-center md:text-left">
-                &copy; 2026 MastroGolf & Ranch. Opening Monday, October 26, 2026. All rights reserved.
-            </p>
-            <div class="flex space-x-4 text-ranchGold">
-                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-instagram text-lg"></i></a>
-                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-facebook text-lg"></i></a>
-                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-whatsapp text-lg"></i></a>
+            <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-200">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-serif font-bold text-lg text-ranch-dark" data-i18n="m2_name">Corte del Patrón & Guarniciones</h3>
+                    <span class="text-ranch-green font-bold text-sm">$450 MXN</span>
+                </div>
+                <p class="text-gray-600 text-xs" data-i18n="m2_desc">Corte fino a las brasas acompañado de papas cambray al romero, vegetales al grill y salsa molcajeteada.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-200">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-serif font-bold text-lg text-ranch-dark" data-i18n="m3_name">Coctelería Artesanal & Frescos</h3>
+                    <span class="text-ranch-green font-bold text-sm">$160 MXN</span>
+                </div>
+                <p class="text-gray-600 text-xs" data-i18n="m3_desc">Margaritas de la casa con agave natural, limonadas con hierbabuena y cervezas artesanales locales frías.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- STAFF VERIFICATION MODAL -->
+    <div id="staff-modal" class="fixed inset-0 bg-ranch-dark/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-8 shadow-2xl relative border border-ranch-gold/30">
+            <button onclick="closeStaffModal()" class="absolute top-6 right-6 text-gray-400 hover:text-ranch-dark text-xl"><i class="fa-solid fa-xmark"></i></button>
+            <div class="text-center mb-6">
+                <div class="w-12 h-12 bg-ranch-green text-ranch-gold rounded-full flex items-center justify-center mx-auto mb-3 text-lg">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3 class="font-serif text-2xl font-bold text-ranch-dark" data-i18n="staff_modal_title">Verificación de Personal</h3>
+                <p class="text-gray-500 text-xs mt-1" data-i18n="staff_modal_desc">Ingrese el nombre del cliente para verificar su pase activo en Santa Carmen.</p>
+            </div>
+            <div class="mb-4">
+                <input type="text" id="verify-search" placeholder="Buscar por nombre de invitado..." class="w-full bg-ranch-sand border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-ranch-green mb-3">
+                <button onclick="verifyVisitor()" class="w-full bg-ranch-dark text-white font-bold py-3 rounded-xl text-xs hover:bg-ranch-green transition" data-i18n="btn_verify">Verificar Acceso</button>
+            </div>
+            <div id="verify-result" class="hidden p-4 rounded-xl bg-green-50 border border-green-200 text-center text-green-800 text-xs font-semibold"></div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-ranch-dark text-white border-t border-ranch-gold/30 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <div>
+                <span class="font-serif text-2xl font-bold tracking-wider text-ranch-sand">SANTA CARMEN</span>
+                <p class="text-gray-400 text-xs mt-1" data-i18n="footer_sub">Ranch & Experience Club • MastroGolf Programs</p>
+            </div>
+            <div class="text-xs text-gray-400">
+                &copy; 2026 Santa Carmen. Todos los derechos reservados. El acceso es nuestro valor, la experiencia nuestra entrega.
             </div>
         </div>
     </footer>
 
-    <!-- Digital Pass / QR Modal -->
-    <div id="modal-digital-pass" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-md hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-3xl max-w-md w-full p-8 shadow-2xl relative border border-ranchGold/30 space-y-6">
-            <button onclick="closeDigitalPassModal()" class="absolute top-5 right-5 text-gray-400 hover:text-gray-600">
-                <i class="fa-solid fa-xmark text-xl"></i>
-            </button>
-            <div class="text-center space-y-2">
-                <span class="inline-block px-3 py-1 rounded-full bg-ranchGold/20 text-ranchGold text-xs uppercase tracking-widest font-bold">
-                    Monday VIP Pass Issued
-                </span>
-                <h3 class="font-serif text-2xl font-bold text-ranchDark" id="pass-modal-name">Guest Name</h3>
-                <p class="text-xs text-gray-500" id="pass-modal-type">All-Inclusive Day Pass</p>
-            </div>
-
-            <!-- QR Code container -->
-            <div class="bg-ranchCard p-6 rounded-2xl flex flex-col items-center justify-center border border-ranchBorder space-y-3">
-                <div id="qrcode-container" class="bg-white p-3 rounded-xl shadow-sm"></div>
-                <span class="text-xs font-mono font-bold text-ranchDark" id="pass-modal-id">MG-9482</span>
-                <span class="text-[10px] text-gray-500 text-center">Scan at gate, range, stables, or clubhouse bar</span>
-            </div>
-
-            <div class="space-y-2">
-                <div class="flex justify-between text-xs text-gray-500 border-b border-gray-100 pb-2">
-                    <span>Date:</span>
-                    <span class="font-medium text-ranchDark">Monday, Oct 26, 2026</span>
-                </div>
-                <div class="flex justify-between text-xs text-gray-500 pb-2">
-                    <span>Total Paid:</span>
-                    <span class="font-bold text-ranchGreen" id="pass-modal-total">$1,800 MXN</span>
-                </div>
-            </div>
-
-            <button onclick="closeDigitalPassModalToStaff()" class="w-full py-3.5 bg-ranchGold text-ranchDark font-bold rounded-xl hover:bg-opacity-90 transition-all text-sm shadow-md">
-                View in Staff Verification Log
-            </button>
-        </div>
-    </div>
-
-    <!-- Staff Verification Panel Modal -->
-    <div id="modal-staff" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-md hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative space-y-6 max-h-[90vh] flex flex-col">
-            <div class="flex items-center justify-between border-b border-gray-100 pb-4">
-                <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 rounded-xl bg-ranchGold/20 text-ranchGold flex items-center justify-center text-lg">
-                        <i class="fa-solid fa-id-badge"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-serif text-xl font-bold text-ranchDark">Staff Gate & Ranch Verification</h3>
-                        <p class="text-xs text-gray-500">Live guest flow for Monday, October 26, 2026</p>
-                    </div>
-                </div>
-                <button onclick="closeStaffModal()" class="text-gray-400 hover:text-gray-600">
-                    <i class="fa-solid fa-xmark text-xl"></i>
-                </button>
-            </div>
-
-            <!-- Search input -->
-            <div>
-                <input type="text" id="staff-search" placeholder="Search by guest name or pass ID (e.g. Mastro)..." oninput="filterStaffList()" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-ranchGold text-sm">
-            </div>
-
-            <!-- Guest List Container -->
-            <div id="staff-guest-list" class="space-y-3 overflow-y-auto flex-grow pr-1">
-                <!-- Dynamically populated -->
-            </div>
-
-            <div class="pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
-                <span>Total Active Guests Today: <strong id="staff-count" class="text-ranchDark">3</strong></span>
-                <button onclick="closeStaffModal()" class="px-5 py-2.5 bg-ranchDark text-white font-semibold rounded-xl hover:bg-opacity-90 text-xs">
-                    Close Panel
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- JavaScript Application Logic -->
+    <!-- JAVASCRIPT LOGIC -->
     <script>
-        // State management
-        let passMode = 'all'; // 'all' or 'alacarte'
-        let reservations = [
-            { id: 'MG-8201', name: 'Alejandro Mastro', type: 'All-Inclusive Day Pass', date: 'Mon, Oct 26', total: '$1,800 MXN', status: 'VIP Gold Wristband' },
-            { id: 'MG-8202', name: 'Sofia Valenzuela', type: 'Equestrian Trail Ride & Wash', date: 'Mon, Oct 26', total: '$900 MXN', status: 'A La Carte Pass' },
-            { id: 'MG-8203', name: 'Carlos Garza', type: 'All-Inclusive Day Pass', date: 'Mon, Oct 26', total: '$1,800 MXN', status: 'VIP Gold Wristband' }
-        ];
+        let currentLang = 'es';
+        let selectedPassName = 'All-Inclusive Day Pass';
+        let selectedPassPrice = 1800;
 
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        }
-
-        function selectPassMode(mode) {
-            passMode = mode;
-            const cardAll = document.getElementById('card-all');
-            const cardAlacarte = document.getElementById('card-alacarte');
-            const radioAll = document.getElementById('radio-all');
-            const radioAlacarte = document.getElementById('radio-alacarte');
-            const optionsContainer = document.getElementById('alacarte-options');
-
-            if (mode === 'all') {
-                radioAll.checked = true;
-                radioAlacarte.checked = false;
-                cardAll.className = "bg-white p-6 sm:p-8 rounded-2xl border-2 border-ranchGold shadow-md cursor-pointer transition-all relative overflow-hidden";
-                cardAlacarte.className = "bg-white p-6 sm:p-8 rounded-2xl border-2 border-ranchBorder shadow-sm cursor-pointer transition-all";
-                optionsContainer.classList.add('opacity-50', 'pointer-events-none');
-
-                document.getElementById('summary-title').innerText = 'All-Inclusive Day Pass';
-                document.getElementById('summary-price').innerText = '$1,800 MXN';
-                document.getElementById('summary-total').innerText = '$1,800 MXN';
-            } else {
-                radioAll.checked = false;
-                radioAlacarte.checked = true;
-                cardAlacarte.className = "bg-white p-6 sm:p-8 rounded-2xl border-2 border-ranchGold shadow-md cursor-pointer transition-all";
-                cardAll.className = "bg-white p-6 sm:p-8 rounded-2xl border-2 border-ranchBorder shadow-sm cursor-pointer transition-all relative overflow-hidden";
-                optionsContainer.classList.remove('opacity-50', 'pointer-events-none');
-
-                updateCalculator();
+        const translations = {
+            es: {
+                nav_experiences: "Experiencias",
+                nav_passes: "Pases & Acceso",
+                nav_calendar: "Calendario Hoy",
+                nav_menu: "Gastronomía",
+                staff_portal: "Staff Check-In",
+                hero_badge: "Acceso Exclusivo & Experiencias de Rancho",
+                hero_title_1: "Donde la Naturaleza",
+                hero_title_2: "Se Vive Sin Límites",
+                hero_subtitle: "Todo acceso requiere membresía o pase de entrada. Disfruta caballos, alta gastronomía, y los programas profesionales de MastroGolf.",
+                cta_pass: "Obtener Pase de Entrada ($150 MXN)",
+                cta_explore: "Explorar Experiencias",
+                access_banner: "Política de Acceso: Todo visitante adquiere un pase de entrada general al llegar ($150 MXN) o el Pase Todo Incluido ($1,800 MXN). El acceso es nuestro valor; la experiencia, nuestra entrega.",
+                exp_tag: "El Ecosistema Santa Carmen",
+                exp_title: "Experiencias A La Carta & Todo Incluido",
+                exp_desc: "Selecciona tu actividad favorita o libera todo el potencial del rancho con nuestro pase diario ilimitado.",
+                badge_horses: "Equestrian",
+                badge_golf: "MastroGolf Programs",
+                badge_fb: "Gastronomía & Bar",
+                card1_title: "Mundo Ecuestre & Cuidado",
+                card1_desc: "Paseos guiados por senderos del rancho, sesiones de lavado, cuidado y conexión profunda con los equinos.",
+                per_session: "por sesión",
+                card2_title: "MastroGolf & Práctica",
+                card2_desc: "Sesiones de práctica en range, clínicas especializadas y tecnología de simulación de alto rendimiento.",
+                per_bucket: "por sesión / cubo",
+                card3_title: "Cocina del Rancho & Bar",
+                card3_desc: "Bebidas artesanales, coctelería y platillos campestres preparados al momento con ingredientes locales.",
+                card3_price: "A La Carta o Incluido",
+                btn_select: "Seleccionar Actividad",
+                cal_tag: "Programación del Día",
+                cal_title: "Calendario de Actividades (Hoy)",
+                status_active: "Actividades Abiertas",
+                cal_item1_title: "Clínica Matutina MastroGolf",
+                cal_item1_desc: "Alineación, swing biomechanics y práctica guiada con Trackman en bahías.",
+                cal_included: "Incluido en Día / $350",
+                cal_item2_title: "Ruta & Baño de Equinos",
+                cal_item2_desc: "Experiencia guiada de cabalgata y cuidado práctico de los caballos en los establos.",
+                cal_item3_title: "Almuerzo Campestre & Coctel",
+                cal_item3_desc: "Gastronomía abierta del rancho con barra de bebidas artesanales en la casa club.",
+                cal_item4_title: "Torneo Relámpago Match Play",
+                cal_item4_desc: "Competencia amistosa en simuladores y práctica libre al atardecer.",
+                pass_tag: "Genera Tu Acceso al Instante",
+                pass_title: "Selecciona Tu Pase de Entrada",
+                pass_desc: "Todo visitante paga su derecho de acceso a la propiedad. Elige entre la entrada general o el pase todo incluido.",
+                pass1_name: "Pase de Entrada General",
+                pass1_desc: "Acceso básico a las instalaciones, áreas comunes y zonas de descanso.",
+                per_day: "por día",
+                badge_recommended: "Recomendado",
+                pass2_name: "Pase Todo Incluido",
+                pass2_desc: "Acceso total: caballos, range de golf ilimitado, y alimentos/bebidas todo el día.",
+                form_title: "Información del Visitante para Generar Pase QR",
+                form_name: "Nombre Completo",
+                form_phone: "Teléfono / WhatsApp",
+                btn_generate: "Generar Mi Pase Digital & Código QR",
+                btn_save_pass: "Guardar / Capturar Pantalla",
+                menu_tag: "Cocina Campestre & Bar",
+                menu_title: "Menú Gastronómico Destacado",
+                menu_desc: "Incluido sin límite con tu Pase Todo Incluido, o disponible a la carta para visitantes con pase general.",
+                m1_name: "Desayuno Campestre Santa Carmen",
+                m1_desc: "Huevos orgánicos de rancho, frijoles de la olla, queso fresco artesanal, tortillas hechas a mano y café de olla.",
+                m2_name: "Corte del Patrón & Guarniciones",
+                m2_desc: "Corte fino a las brasas acompañado de papas cambray al romero, vegetales al grill y salsa molcajeteada.",
+                m3_name: "Coctelería Artesanal & Frescos",
+                m3_desc: "Margaritas de la casa con agave natural, limonadas con hierbabuena y cervezas artesanales locales frías.",
+                staff_modal_title: "Verificación de Personal",
+                staff_modal_desc: "Ingrese el nombre del cliente para verificar su pase activo en Santa Carmen.",
+                btn_verify: "Verificar Acceso",
+                footer_sub: "Ranch & Experience Club • MastroGolf Programs"
+            },
+            en: {
+                nav_experiences: "Experiences",
+                nav_passes: "Passes & Access",
+                nav_calendar: "Today's Calendar",
+                nav_menu: "Gastronomy",
+                staff_portal: "Staff Check-In",
+                hero_badge: "Exclusive Access & Ranch Experiences",
+                hero_title_1: "Where Nature Meets",
+                hero_title_2: "Boundless Experience",
+                hero_subtitle: "All access requires a membership or entry pass. Enjoy horses, fine ranch gastronomy, and professional MastroGolf programs.",
+                cta_pass: "Get Entry Pass ($150 MXN)",
+                cta_explore: "Explore Experiences",
+                access_banner: "Access Policy: Every visitor acquires a general entry pass upon arrival ($150 MXN) or the All-Inclusive Pass ($1,800 MXN). Access is our value; experience is our delivery.",
+                exp_tag: "The Santa Carmen Ecosystem",
+                exp_title: "A La Carta & All-Inclusive Experiences",
+                exp_desc: "Select your favorite activity or unlock the full potential of the ranch with our unlimited daily pass.",
+                badge_horses: "Equestrian",
+                badge_golf: "MastroGolf Programs",
+                badge_fb: "Gastronomy & Bar",
+                card1_title: "Equestrian World & Care",
+                card1_desc: "Guided trail rides across the ranch, washing sessions, grooming, and deep connection with horses.",
+                per_session: "per session",
+                card2_title: "MastroGolf & Practice",
+                card2_desc: "Range practice sessions, specialized clinics, and high-performance simulation technology.",
+                per_bucket: "per session / bucket",
+                card3_title: "Ranch Kitchen & Bar",
+                card3_desc: "Artisanal drinks, cocktails, and freshly prepared country dishes using local ingredients.",
+                card3_price: "A La Carta or Included",
+                btn_select: "Select Activity",
+                cal_tag: "Daily Schedule",
+                cal_title: "Today's Activity Calendar",
+                status_active: "Open Activities",
+                cal_item1_title: "Morning MastroGolf Clinic",
+                cal_item1_desc: "Alignment, swing biomechanics, and guided Trackman bay practice.",
+                cal_included: "Included in Day / $350",
+                cal_item2_title: "Horse Trail & Wash",
+                cal_item2_desc: "Guided trail riding experience and practical stable horse care.",
+                cal_item3_title: "Country Lunch & Cocktail",
+                cal_item3_desc: "Open ranch gastronomy with artisanal drink bar at the clubhouse.",
+                cal_item4_title: "Match Play Lightning Tournament",
+                cal_item4_desc: "Friendly simulator competition and sunset open practice.",
+                pass_tag: "Generate Your Access Instantly",
+                pass_title: "Select Your Entry Pass",
+                pass_desc: "Every visitor pays their right of access to the property. Choose between general entry or all-inclusive pass.",
+                pass1_name: "General Entry Pass",
+                pass1_desc: "Basic access to facilities, common areas, and relaxation zones.",
+                per_day: "per day",
+                badge_recommended: "Recommended",
+                pass2_name: "All-Inclusive Pass",
+                pass2_desc: "Total access: horses, unlimited golf range, and food/drinks all day long.",
+                form_title: "Visitor Information for QR Pass",
+                form_name: "Full Name",
+                form_phone: "Phone / WhatsApp",
+                btn_generate: "Generate My Digital QR Pass",
+                btn_save_pass: "Save / Take Screenshot",
+                menu_tag: "Country Kitchen & Bar",
+                menu_title: "Featured Gastronomy Menu",
+                menu_desc: "Included without limit with your All-Inclusive Pass, or available a la carta for general pass visitors.",
+                m1_name: "Santa Carmen Country Breakfast",
+                m1_desc: "Organic ranch eggs, pot beans, artisanal fresh cheese, hand-pressed tortillas, and clay-pot coffee.",
+                m2_name: "The Boss's Cut & Sides",
+                m2_desc: "Fine fire-roasted cut served with rosemary baby potatoes, grilled vegetables, and molcajete salsa.",
+                m3_name: "Artisanal Cocktails & Refreshers",
+                m3_desc: "House margaritas with natural agave, mint lemonades, and cold local craft beers.",
+                staff_modal_title: "Staff Verification",
+                staff_modal_desc: "Enter guest name to verify active pass status at Santa Carmen.",
+                btn_verify: "Verify Access",
+                footer_sub: "Ranch & Experience Club • MastroGolf Programs"
             }
-        }
+        };
 
-        function updateCalculator() {
-            if (passMode !== 'alacarte') return;
-
-            const checkboxes = document.querySelectorAll('#alacarte-options input[type="checkbox"]');
-            let total = 0;
-            let names = [];
-
-            checkboxes.forEach(cb => {
-                if (cb.checked) {
-                    total += parseInt(cb.value);
-                    names.push(cb.parentElement.querySelector('span.text-sm').innerText.split(' ')[0]);
+        function toggleLanguage() {
+            currentLang = currentLang === 'es' ? 'en' : 'es';
+            document.getElementById('lang-label').innerText = currentLang === 'es' ? 'EN / ES' : 'ES / EN';
+            
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    el.innerText = translations[currentLang][key];
                 }
             });
+        }
 
-            if (names.length === 0) {
-                document.getElementById('summary-title').innerText = 'No a la carte items selected';
-                document.getElementById('summary-price').innerText = '$0 MXN';
+        function selectPassType(name, price) {
+            selectedPassName = name;
+            selectedPassPrice = price;
+            if(name.includes('General')) {
+                document.getElementById('card-general').className = "bg-white/10 border-2 border-ranch-gold rounded-2xl p-6 cursor-pointer relative shadow-lg";
+                document.getElementById('card-all').className = "bg-white/5 border-2 border-ranch-gold/40 rounded-2xl p-6 cursor-pointer hover:bg-white/10 transition duration-300 relative";
+                document.getElementById('check-general').className = "fa-solid fa-circle-check text-xl text-ranch-gold";
+                document.getElementById('check-all').className = "fa-solid fa-circle text-xl text-gray-500";
             } else {
-                document.getElementById('summary-title').innerText = names.join(' + ');
-                document.getElementById('summary-price').innerText = `$${total} MXN`;
+                document.getElementById('card-all').className = "bg-ranch-gold/20 border-2 border-ranch-gold rounded-2xl p-6 cursor-pointer relative shadow-lg";
+                document.getElementById('card-general').className = "bg-white/5 border-2 border-ranch-gold/40 rounded-2xl p-6 cursor-pointer hover:bg-white/10 transition duration-300 relative";
+                document.getElementById('check-all').className = "fa-solid fa-circle-check text-xl text-ranch-gold";
+                document.getElementById('check-general').className = "fa-solid fa-circle text-xl text-gray-500";
             }
-            document.getElementById('summary-total').innerText = `$${total} MXN`;
         }
 
-        let generatedPassData = null;
-
-        function generateDigitalPass() {
-            const nameInput = document.getElementById('input-guest-name');
-            const guestName = nameInput.value.trim() || 'Valued Guest';
-
-            let title = 'All-Inclusive Day Pass';
-            let totalStr = '$1,800 MXN';
-            let status = 'VIP Gold Wristband';
-
-            if (passMode === 'alacarte') {
-                const checked = document.querySelectorAll('#alacarte-options input[type="checkbox"]:checked');
-                if (checked.length === 0) {
-                    alert('Please select at least one a la carte activity or choose the All-Inclusive Pass.');
-                    return;
-                }
-                let sum = 0;
-                let names = [];
-                checked.forEach(cb => {
-                    sum += parseInt(cb.value);
-                    names.push(cb.parentElement.querySelector('span.text-sm').innerText);
-                });
-                title = names.join(', ');
-                totalStr = `$${sum} MXN`;
-                status = 'A La Carte Pass';
-            }
-
-            const passId = 'MG-' + Math.floor(1000 + Math.random() * 9000);
-
-            // Save to reservations
-            reservations.unshift({
-                id: passId,
-                name: guestName,
-                type: title,
-                date: 'Mon, Oct 26',
-                total: totalStr,
-                status: status
-            });
-
-            // Populate Modal
-            document.getElementById('pass-modal-name').innerText = guestName;
-            document.getElementById('pass-modal-type').innerText = title;
-            document.getElementById('pass-modal-id').innerText = passId;
-            document.getElementById('pass-modal-total').innerText = totalStr;
-
-            // Render QR Code
-            const qrContainer = document.getElementById('qrcode-container');
-            qrContainer.innerHTML = '';
-            new QRCode(qrContainer, {
-                text: `MASTROGOLF-PASS:${passId}:${guestName}:${title}`,
-                width: 140,
-                height: 140,
-                colorDark: '#0d1311',
-                colorLight: '#ffffff',
-                correctLevel: QRCode.CorrectLevel.H
-            });
-
-            document.getElementById('modal-digital-pass').classList.remove('hidden');
+        function selectExperience(expName, expPrice) {
+            selectedPassName = expName;
+            selectedPassPrice = expPrice;
+            document.getElementById('passes').scrollIntoView({ behavior: 'smooth' });
         }
 
-        function closeDigitalPassModal() {
-            document.getElementById('modal-digital-pass').classList.add('hidden');
-            document.getElementById('input-guest-name').value = '';
-        }
+        function generateQRCode() {
+            const name = document.getElementById('visitor-name').value;
+            const phone = document.getElementById('visitor-phone').value;
 
-        function closeDigitalPassModalToStaff() {
-            closeDigitalPassModal();
-            openStaffModal();
-        }
-
-        function openStaffModal() {
-            renderStaffList(reservations);
-            document.getElementById('modal-staff').classList.remove('hidden');
-        }
-
-        function closeStaffModal() {
-            document.getElementById('modal-staff').classList.add('hidden');
-        }
-
-        function renderStaffList(list) {
-            const container = document.getElementById('staff-guest-list');
-            document.getElementById('staff-count').innerText = list.length;
-
-            if (list.length === 0) {
-                container.innerHTML = '<p class="text-xs text-gray-500 text-center py-6">No matching guest records found.</p>';
+            if(!name) {
+                alert(currentLang === 'es' ? 'Por favor ingrese su nombre completo.' : 'Please enter your full name.');
                 return;
             }
 
-            container.innerHTML = list.map(item => `
-                <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 flex items-center justify-between">
-                    <div>
-                        <div class="flex items-center space-x-2 mb-1">
-                            <span class="text-xs font-mono font-bold text-ranchGold">${item.id}</span>
-                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full ${item.status.includes('VIP') ? 'bg-amber-100 text-amber-800' : 'bg-emerald-100 text-emerald-800'}">${item.status}</span>
-                        </div>
-                        <h4 class="font-bold text-sm text-ranchDark">${item.name}</h4>
-                        <p class="text-xs text-gray-500 mt-0.5">${item.type} • ${item.date}</p>
-                    </div>
-                    <div class="text-right">
-                        <span class="font-serif font-bold text-sm text-ranchGreen block">${item.total}</span>
-                        <span class="text-[10px] text-emerald-600 font-medium"><i class="fa-solid fa-circle-check mr-1"></i>Verified Active</span>
-                    </div>
-                </div>
-            `).join('');
+            const qrContainer = document.getElementById('qrcode-container');
+            qrContainer.innerHTML = '';
+
+            const qrData = `SANTA CARMEN PASS: ${name} | Type: ${selectedPassName} | Price: $${selectedPassPrice} MXN | Date: 2026-10-26`;
+            
+            try {
+                const qr = qrcode(0, 'M');
+                qr.addData(qrData);
+                qr.make();
+                qrContainer.innerHTML = qr.createImgTag(5);
+            } catch(e) {
+                qrContainer.innerText = "QR Code Generation Error";
+            }
+
+            const detailsText = currentLang === 'es' 
+                ? `<strong>Visitante:</strong> ${name} <br><strong>Pase:</strong> ${selectedPassName} ($${selectedPassPrice} MXN)<br><strong>Fecha de Validez:</strong> Lunes, 26 de Octubre, 2026<br><span class="text-green-600 font-bold">¡Acceso Autorizado a Santa Carmen!</span>`
+                : `<strong>Visitor:</strong> ${name} <br><strong>Pass:</strong> ${selectedPassName} ($${selectedPassPrice} MXN)<br><strong>Valid Date:</strong> Monday, October 26, 2026<br><span class="text-green-600 font-bold">Santa Carmen Access Authorized!</span>`;
+
+            document.getElementById('pass-details-text').innerHTML = detailsText;
+            document.getElementById('qr-result-box').classList.remove('hidden');
         }
 
-        function filterStaffList() {
-            const query = document.getElementById('staff-search').value.toLowerCase();
-            const filtered = reservations.filter(r => r.name.toLowerCase().includes(query) || r.id.toLowerCase().includes(query));
-            renderStaffList(filtered);
+        function openStaffModal() {
+            document.getElementById('staff-modal').classList.remove('hidden');
+        }
+
+        function closeStaffModal() {
+            document.getElementById('staff-modal').classList.add('hidden');
+        }
+
+        function verifyVisitor() {
+            const query = document.getElementById('verify-search').value.trim();
+            const resBox = document.getElementById('verify-result');
+            if(!query) {
+                resBox.innerText = "Ingrese un nombre para verificar.";
+                resBox.classList.remove('hidden');
+                return;
+            }
+            resBox.innerHTML = `<i class="fa-solid fa-circle-check text-green-700 mr-1"></i> <strong>${query}</strong>: Pase Activo Verificado en Santa Carmen. Acceso Concedido.`;
+            resBox.classList.remove('hidden');
         }
     </script>
 </body>
