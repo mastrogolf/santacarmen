@@ -43,8 +43,7 @@
             background-size: cover;
             background-position: center;
         }
-        /* Responsive iframe container */
-        .calendar-container iframe {
+        .calendar-box iframe {
             width: 100%;
             height: 600px;
             border: 0;
@@ -57,7 +56,6 @@
     <!-- TOP NAVIGATION BAR -->
     <header class="sticky top-0 z-50 bg-ranch-dark/95 backdrop-blur-md border-b border-ranch-gold/30 text-white shadow-xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Brand -->
             <div class="flex items-center space-x-3">
                 <div class="w-10 h-10 rounded-full bg-ranch-gold flex items-center justify-center text-ranch-dark font-serif font-bold text-xl shadow-lg">
                     SC
@@ -68,7 +66,6 @@
                 </div>
             </div>
 
-            <!-- Navigation Links -->
             <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
                 <a href="#experiences" class="hover:text-ranch-gold transition" data-i18n="nav_experiences">Experiencias</a>
                 <a href="#passes" class="hover:text-ranch-gold transition" data-i18n="nav_passes">Pases & Acceso</a>
@@ -76,7 +73,6 @@
                 <a href="#menu" class="hover:text-ranch-gold transition" data-i18n="nav_menu">Gastronomía</a>
             </nav>
 
-            <!-- Actions: Language Toggle & Staff Portal -->
             <div class="flex items-center space-x-4">
                 <button onclick="toggleLanguage()" class="px-3 py-1.5 rounded-full border border-ranch-gold/50 text-xs font-semibold tracking-wider hover:bg-ranch-gold hover:text-ranch-dark transition">
                     <span id="lang-label">EN / ES</span>
@@ -144,10 +140,4 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="font-serif text-2xl font-bold text-ranch-dark mb-2" data-i18n="card1_title">Mundo Ecuestre & Cuidado</h3>
-                        <p class="text-gray-600 text-sm mb-4" data-i18n="card1_desc">Paseos guiados por senderos del rancho, sesiones de lavado, cuidado y conexión profunda con los equinos.</p>
-                        <div class="text-ranch-green font-bold text-lg mb-4">$600 - $1,000 MXN <span class="text-xs font-normal text-gray-500" data-i18n="per_session">por sesión</span></div>
-                    </div>
-                </div>
-                <div class="px-6 pb-6">
-                    <button onclick="selectExperience('Equestrian Experience', 800)" class="w
+                        <h3 class="font-serif
