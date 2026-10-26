@@ -56,7 +56,6 @@
     <!-- TOP NAVIGATION BAR -->
     <header class="sticky top-0 z-50 bg-ranch-dark/95 backdrop-blur-md border-b border-ranch-gold/30 text-white shadow-xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Brand -->
             <div class="flex items-center space-x-3">
                 <div class="w-10 h-10 rounded-full bg-ranch-gold flex items-center justify-center text-ranch-dark font-serif font-bold text-xl shadow-lg">
                     SC
@@ -67,15 +66,13 @@
                 </div>
             </div>
 
-            <!-- Navigation Links -->
             <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
                 <a href="#experiences" class="hover:text-ranch-gold transition" data-i18n="nav_experiences">Experiencias</a>
                 <a href="#passes" class="hover:text-ranch-gold transition" data-i18n="nav_passes">Pases & Acceso</a>
                 <a href="#calendar" class="hover:text-ranch-gold transition" data-i18n="nav_calendar">Calendario Hoy</a>
-                <a href="#menu" class="hover:text-ranch-gold transition" data-i18n="nav_menu">Gastronomía</a>
+                <a href="#menu" class="hover:text-ranch-gold transition" data-i18n="nav_menu">Midway House</a>
             </nav>
 
-            <!-- Actions: Language Toggle & Staff Portal -->
             <div class="flex items-center space-x-4">
                 <button onclick="toggleLanguage()" class="px-3 py-1.5 rounded-full border border-ranch-gold/50 text-xs font-semibold tracking-wider hover:bg-ranch-gold hover:text-ranch-dark transition">
                     <span id="lang-label">EN / ES</span>
@@ -99,7 +96,7 @@
                 <span class="text-ranch-gold italic" data-i18n="hero_title_2">Se Vive Sin Límites</span>
             </h1>
             <p class="text-lg sm:text-xl text-gray-200 font-light max-w-2xl mx-auto mb-10 leading-relaxed" data-i18n="hero_subtitle">
-                Todo acceso requiere membresía o pase de entrada. Disfruta caballos, alta gastronomía, y los programas profesionales de MastroGolf.
+                Todo acceso requiere membresía o pase de entrada. Disfruta caballos, avituallamiento de atletas y los programas profesionales de MastroGolf.
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a href="#passes" class="w-full sm:w-auto bg-ranch-gold text-ranch-dark font-bold px-8 py-4 rounded-xl shadow-xl hover:bg-white transition text-center tracking-wide" data-i18n="cta_pass">
@@ -177,23 +174,23 @@
                 </div>
             </div>
 
-            <!-- Card 3: Gastronomy & Drinks -->
+            <!-- Card 3: Midway House -->
             <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200/80 flex flex-col justify-between group hover:shadow-2xl transition duration-300">
                 <div>
                     <div class="h-64 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Gastronomy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <div class="absolute top-4 right-4 bg-ranch-dark/80 backdrop-blur-md text-ranch-gold px-3 py-1 rounded-full text-xs font-semibold" data-i18n="badge_fb">
-                            Gastronomía & Bar
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Midway House" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-4 right-4 bg-ranch-dark/80 backdrop-blur-md text-ranch-gold px-3 py-1 rounded-full text-xs font-semibold" data-i18n="badge_midway">
+                            Midway House
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="font-serif text-2xl font-bold text-ranch-dark mb-2" data-i18n="card3_title">Cocina del Rancho & Bar</h3>
-                        <p class="text-gray-600 text-sm mb-4" data-i18n="card3_desc">Bebidas artesanales, coctelería y platillos campestres preparados al momento con ingredientes locales.</p>
-                        <div class="text-ranch-green font-bold text-lg mb-4" data-i18n="card3_price">A La Carta o Incluido</div>
+                        <h3 class="font-serif text-2xl font-bold text-ranch-dark mb-2" data-i18n="card3_title">Midway House & Snack Bar</h3>
+                        <p class="text-gray-600 text-sm mb-4" data-i18n="card3_desc">Estación de avituallamiento para atletas: bebidas frías, electrolitos, snacks y avituallamiento express.</p>
+                        <div class="text-ranch-green font-bold text-lg mb-4" data-i18n="card3_price">Snacks & Bebidas a la Mano</div>
                     </div>
                 </div>
                 <div class="px-6 pb-6">
-                    <button onclick="selectExperience('Rancho Dining & Drinks', 500)" class="w-full bg-ranch-dark text-ranch-sand py-3 rounded-xl font-semibold hover:bg-ranch-green transition text-sm" data-i18n="btn_select">
+                    <button onclick="selectExperience('Midway House Fuel Pass', 200)" class="w-full bg-ranch-dark text-ranch-sand py-3 rounded-xl font-semibold hover:bg-ranch-green transition text-sm" data-i18n="btn_select">
                         Seleccionar Actividad
                     </button>
                 </div>
@@ -254,12 +251,12 @@
                 <div class="bg-ranch-sand rounded-2xl p-6 border border-ranch-gold/30 flex flex-col justify-between">
                     <div>
                         <span class="text-xs font-bold text-ranch-gold uppercase tracking-wider">02:00 PM - 04:00 PM</span>
-                        <h3 class="font-serif text-xl font-bold text-ranch-dark mt-2" data-i18n="cal_item3_title">Almuerzo Campestre & Coctel</h3>
-                        <p class="text-gray-600 text-xs mt-2" data-i18n="cal_item3_desc">Gastronomía abierta del rancho con barra de bebidas artesanales en la casa club.</p>
+                        <h3 class="font-serif text-xl font-bold text-ranch-dark mt-2" data-i18n="cal_item3_title">Midway House & Snack Break</h3>
+                        <p class="text-gray-600 text-xs mt-2" data-i18n="cal_item3_desc">Recarga de electrolitos, bebidas frías y snacks de alto rendimiento para atletas.</p>
                     </div>
                     <div class="mt-6 pt-4 border-t border-gray-300 flex items-center justify-between text-xs font-semibold text-ranch-green">
-                        <span data-i18n="cal_included">Incluido en Día / A la carta</span>
-                        <i class="fa-solid fa-utensils"></i>
+                        <span data-i18n="cal_included">Incluido en Todo Incluido</span>
+                        <i class="fa-solid fa-bolt"></i>
                     </div>
                 </div>
 
@@ -304,7 +301,7 @@
                     <span class="bg-ranch-gold text-ranch-dark text-[10px] font-bold px-3 py-0.5 rounded-full uppercase absolute -top-3 left-6" data-i18n="badge_recommended">Recomendado</span>
                     <div class="absolute top-4 right-4 text-ranch-gold"><i class="fa-solid fa-circle-check text-xl" id="check-all"></i></div>
                     <h3 class="font-serif text-2xl font-bold text-ranch-sand mb-1" data-i18n="pass2_name">Pase Todo Incluido</h3>
-                    <p class="text-gray-300 text-xs mb-4" data-i18n="pass2_desc">Acceso total: caballos, range de golf ilimitado, y alimentos/bebidas todo el día.</p>
+                    <p class="text-gray-300 text-xs mb-4" data-i18n="pass2_desc">Acceso total: caballos, range de golf ilimitado, snacks en Midway House y alimentos todo el día.</p>
                     <div class="text-ranch-gold font-bold text-2xl">$1,800 MXN <span class="text-xs text-gray-400 font-normal" data-i18n="per_day">por día</span></div>
                 </div>
             </div>
@@ -343,35 +340,49 @@
         </div>
     </section>
 
-    <!-- RESTAURANT & BAR MENU PREVIEW -->
+    <!-- MIDWAY HOUSE & SNACK BAR CONCEPT SECTION -->
     <section id="menu" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16">
-            <span class="text-ranch-gold text-xs font-bold tracking-widest uppercase" data-i18n="menu_tag">Cocina Campestre & Bar</span>
-            <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-2 text-ranch-dark" data-i18n="menu_title">Menú Gastronómico Destacado</h2>
-            <p class="text-gray-600 mt-2 text-sm" data-i18n="menu_desc">Incluido sin límite con tu Pase Todo Incluido, o disponible a la carta para visitantes con pase general.</p>
+            <span class="text-ranch-gold text-xs font-bold tracking-widest uppercase" data-i18n="menu_tag">Avituallamiento & Athlete Fuel</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-2 text-ranch-dark" data-i18n="menu_title">Midway House & Snack Bar</h2>
+            <p class="text-gray-600 mt-2 text-sm" data-i18n="menu_desc">Productos populares y de alta calidad para atletas, golfistas y visitantes. Snacking rápido, cero esperas, 100% energía.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-200">
-                <div class="flex justify-between items-start mb-2">
-                    <h3 class="font-serif font-bold text-lg text-ranch-dark" data-i18n="m1_name">Desayuno Campestre Santa Carmen</h3>
-                    <span class="text-ranch-green font-bold text-sm">$220 MXN</span>
+            <!-- Item 1 -->
+            <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-200 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-serif font-bold text-lg text-ranch-dark" data-i18n="m1_name">Hidratación & Electrolitos</h3>
+                        <span class="text-ranch-green font-bold text-sm">$45 - $80 MXN</span>
+                    </div>
+                    <p class="text-gray-600 text-xs" data-i18n="m1_desc">Bebidas isotónicas premium, agua de coco natural, líquidos electrolíticos y cafés fríos en barra fría.</p>
                 </div>
-                <p class="text-gray-600 text-xs" data-i18n="m1_desc">Huevos orgánicos de rancho, frijoles de la olla, queso fresco artesanal, tortillas hechas a mano y café de olla.</p>
+                <div class="mt-4 pt-3 border-t border-gray-100 text-[11px] text-ranch-gold font-semibold uppercase tracking-wider" data-i18n="m1_tag">Energía instantánea</div>
             </div>
-            <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-200">
-                <div class="flex justify-between items-start mb-2">
-                    <h3 class="font-serif font-bold text-lg text-ranch-dark" data-i18n="m2_name">Corte del Patrón & Guarniciones</h3>
-                    <span class="text-ranch-green font-bold text-sm">$450 MXN</span>
+
+            <!-- Item 2 -->
+            <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-200 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-serif font-bold text-lg text-ranch-dark" data-i18n="m2_name">Barras de Proteína & Energy Fuel</h3>
+                        <span class="text-ranch-green font-bold text-sm">$50 - $90 MXN</span>
+                    </div>
+                    <p class="text-gray-600 text-xs" data-i18n="m2_desc">Selección de barras proteicas (RXBAR, KIND, GoMacro), biltong, jerky y frutos secos para el recorrido.</p>
                 </div>
-                <p class="text-gray-600 text-xs" data-i18n="m2_desc">Corte fino a las brasas acompañado de papas cambray al romero, vegetales al grill y salsa molcajeteada.</p>
+                <div class="mt-4 pt-3 border-t border-gray-100 text-[11px] text-ranch-gold font-semibold uppercase tracking-wider" data-i18n="m2_tag">Alto rendimiento</div>
             </div>
-            <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-200">
-                <div class="flex justify-between items-start mb-2">
-                    <h3 class="font-serif font-bold text-lg text-ranch-dark" data-i18n="m3_name">Coctelería Artesanal & Frescos</h3>
-                    <span class="text-ranch-green font-bold text-sm">$160 MXN</span>
+
+            <!-- Item 3 -->
+            <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-200 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-serif font-bold text-lg text-ranch-dark" data-i18n="m3_name">Cervezas Artesanales & Coctelería Fría</h3>
+                        <span class="text-ranch-green font-bold text-sm">$60 - $120 MXN</span>
+                    </div>
+                    <p class="text-gray-600 text-xs" data-i18n="m3_desc">Cervezas artesanales locales frías, seltzers y bebidas refrescantes para disfrutar al finalizar tu sesión.</p>
                 </div>
-                <p class="text-gray-600 text-xs" data-i18n="m3_desc">Margaritas de la casa con agave natural, limonadas con hierbabuena y cervezas artesanales locales frías.</p>
+                <div class="mt-4 pt-3 border-t border-gray-100 text-[11px] text-ranch-gold font-semibold uppercase tracking-wider" data-i18n="m3_tag">Social & Refresh</div>
             </div>
         </div>
     </section>
@@ -419,12 +430,12 @@
                 nav_experiences: "Experiencias",
                 nav_passes: "Pases & Acceso",
                 nav_calendar: "Calendario Hoy",
-                nav_menu: "Gastronomía",
+                nav_menu: "Midway House",
                 staff_portal: "Staff Check-In",
                 hero_badge: "Acceso Exclusivo & Experiencias de Rancho",
                 hero_title_1: "Donde la Naturaleza",
                 hero_title_2: "Se Vive Sin Límites",
-                hero_subtitle: "Todo acceso requiere membresía o pase de entrada. Disfruta caballos, alta gastronomía, y los programas profesionales de MastroGolf.",
+                hero_subtitle: "Todo acceso requiere membresía o pase de entrada. Disfruta caballos, avituallamiento de atletas y los programas profesionales de MastroGolf.",
                 cta_pass: "Obtener Pase de Entrada ($150 MXN)",
                 cta_explore: "Explorar Experiencias",
                 access_banner: "Política de Acceso: Todo visitante adquiere un pase de entrada general al llegar ($150 MXN) o el Pase Todo Incluido ($1,800 MXN). El acceso es nuestro valor; la experiencia, nuestra entrega.",
@@ -433,16 +444,16 @@
                 exp_desc: "Selecciona tu actividad favorita o libera todo el potencial del rancho con nuestro pase diario ilimitado.",
                 badge_horses: "Equestrian",
                 badge_golf: "MastroGolf Programs",
-                badge_fb: "Gastronomía & Bar",
+                badge_midway: "Midway House",
                 card1_title: "Mundo Ecuestre & Cuidado",
                 card1_desc: "Paseos guiados por senderos del rancho, sesiones de lavado, cuidado y conexión profunda con los equinos.",
                 per_session: "por sesión",
                 card2_title: "MastroGolf & Práctica",
                 card2_desc: "Sesiones de práctica en range, clínicas especializadas y tecnología de simulación de alto rendimiento.",
                 per_bucket: "por sesión / cubo",
-                card3_title: "Cocina del Rancho & Bar",
-                card3_desc: "Bebidas artesanales, coctelería y platillos campestres preparados al momento con ingredientes locales.",
-                card3_price: "A La Carta o Incluido",
+                card3_title: "Midway House & Snack Bar",
+                card3_desc: "Estación de avituallamiento para atletas: bebidas frías, electrolitos, snacks y avituallamiento express.",
+                card3_price: "Snacks & Bebidas a la Mano",
                 btn_select: "Seleccionar Actividad",
                 cal_tag: "Programación del Día",
                 cal_title: "Calendario de Actividades",
@@ -452,8 +463,8 @@
                 cal_included: "Incluido en Día / $350",
                 cal_item2_title: "Ruta & Baño de Equinos",
                 cal_item2_desc: "Experiencia guiada de cabalgata y cuidado práctico de los caballos en los establos.",
-                cal_item3_title: "Almuerzo Campestre & Coctel",
-                cal_item3_desc: "Gastronomía abierta del rancho con barra de bebidas artesanales en la casa club.",
+                cal_item3_title: "Midway House & Snack Break",
+                cal_item3_desc: "Recarga de electrolitos, bebidas frías y snacks de alto rendimiento para atletas.",
                 cal_item4_title: "Torneo Relámpago Match Play",
                 cal_item4_desc: "Competencia amistosa en simuladores y práctica libre al atardecer.",
                 pass_tag: "Genera Tu Acceso al Instante",
@@ -464,21 +475,24 @@
                 per_day: "por día",
                 badge_recommended: "Recomendado",
                 pass2_name: "Pase Todo Incluido",
-                pass2_desc: "Acceso total: caballos, range de golf ilimitado, y alimentos/bebidas todo el día.",
+                pass2_desc: "Acceso total: caballos, range de golf ilimitado, snacks en Midway House y alimentos todo el día.",
                 form_title: "Información del Visitante para Generar Pase QR",
                 form_name: "Nombre Completo",
                 form_phone: "Teléfono / WhatsApp",
                 btn_generate: "Generar Mi Pase Digital & Código QR",
                 btn_save_pass: "Guardar / Capturar Pantalla",
-                menu_tag: "Cocina Campestre & Bar",
-                menu_title: "Menú Gastronómico Destacado",
-                menu_desc: "Incluido sin límite con tu Pase Todo Incluido, o disponible a la carta para visitantes con pase general.",
-                m1_name: "Desayuno Campestre Santa Carmen",
-                m1_desc: "Huevos orgánicos de rancho, frijoles de la olla, queso fresco artesanal, tortillas hechas a mano y café de olla.",
-                m2_name: "Corte del Patrón & Guarniciones",
-                m2_desc: "Corte fino a las brasas acompañado de papas cambray al romero, vegetales al grill y salsa molcajeteada.",
-                m3_name: "Coctelería Artesanal & Frescos",
-                m3_desc: "Margaritas de la casa con agave natural, limonadas con hierbabuena y cervezas artesanales locales frías.",
+                menu_tag: "Avituallamiento & Athlete Fuel",
+                menu_title: "Midway House & Snack Bar",
+                menu_desc: "Productos populares y de alta calidad para atletas, golfistas y visitantes. Snacking rápido, cero esperas, 100% energía.",
+                m1_name: "Hidratación & Electrolitos",
+                m1_desc: "Bebidas isotónicas premium, agua de coco natural, líquidos electrolíticos y cafés fríos en barra fría.",
+                m1_tag: "Energía instantánea",
+                m2_name: "Barras de Proteína & Energy Fuel",
+                m2_desc: "Selección de barras proteicas (RXBAR, KIND, GoMacro), biltong, jerky y frutos secos para el recorrido.",
+                m2_tag: "Alto rendimiento",
+                m3_name: "Cervezas Artesanales & Coctelería Fría",
+                m3_desc: "Cervezas artesanales locales frías, seltzers y bebidas refrescantes para disfrutar al finalizar tu sesión.",
+                m3_tag: "Social & Refresh",
                 staff_modal_title: "Verificación de Personal",
                 staff_modal_desc: "Ingrese el nombre del cliente para verificar su pase activo en Santa Carmen.",
                 btn_verify: "Verificar Acceso",
@@ -488,12 +502,12 @@
                 nav_experiences: "Experiences",
                 nav_passes: "Passes & Access",
                 nav_calendar: "Today's Calendar",
-                nav_menu: "Gastronomy",
+                nav_menu: "Midway House",
                 staff_portal: "Staff Check-In",
                 hero_badge: "Exclusive Access & Ranch Experiences",
                 hero_title_1: "Where Nature Meets",
                 hero_title_2: "Boundless Experience",
-                hero_subtitle: "All access requires a membership or entry pass. Enjoy horses, fine ranch gastronomy, and professional MastroGolf programs.",
+                hero_subtitle: "All access requires a membership or entry pass. Enjoy horses, athlete refueling, and professional MastroGolf programs.",
                 cta_pass: "Get Entry Pass ($150 MXN)",
                 cta_explore: "Explore Experiences",
                 access_banner: "Access Policy: Every visitor acquires a general entry pass upon arrival ($150 MXN) or the All-Inclusive Pass ($1,800 MXN). Access is our value; experience is our delivery.",
@@ -502,16 +516,16 @@
                 exp_desc: "Select your favorite activity or unlock the full potential of the ranch with our unlimited daily pass.",
                 badge_horses: "Equestrian",
                 badge_golf: "MastroGolf Programs",
-                badge_fb: "Gastronomy & Bar",
+                badge_midway: "Midway House",
                 card1_title: "Equestrian World & Care",
                 card1_desc: "Guided trail rides across the ranch, washing sessions, grooming, and deep connection with horses.",
                 per_session: "per session",
                 card2_title: "MastroGolf & Practice",
                 card2_desc: "Range practice sessions, specialized clinics, and high-performance simulation technology.",
                 per_bucket: "per session / bucket",
-                card3_title: "Ranch Kitchen & Bar",
-                card3_desc: "Artisanal drinks, cocktails, and freshly prepared country dishes using local ingredients.",
-                card3_price: "A La Carta or Included",
+                card3_title: "Midway House & Snack Bar",
+                card3_desc: "Athlete refueling station: chilled drinks, electrolytes, quick snacks, and express grab-and-go fuel.",
+                card3_price: "Snacks & Drinks Ready",
                 btn_select: "Select Activity",
                 cal_tag: "Daily Schedule",
                 cal_title: "Activity Calendar",
@@ -521,8 +535,8 @@
                 cal_included: "Included in Day / $350",
                 cal_item2_title: "Horse Trail & Wash",
                 cal_item2_desc: "Guided trail riding experience and practical stable horse care.",
-                cal_item3_title: "Country Lunch & Cocktail",
-                cal_item3_desc: "Open ranch gastronomy with artisanal drink bar at the clubhouse.",
+                cal_item3_title: "Midway House & Snack Break",
+                cal_item3_desc: "Electrolyte reload, cold beverages, and high-performance snacks for athletes.",
                 cal_item4_title: "Match Play Lightning Tournament",
                 cal_item4_desc: "Friendly simulator competition and sunset open practice.",
                 pass_tag: "Generate Your Access Instantly",
@@ -533,21 +547,24 @@
                 per_day: "per day",
                 badge_recommended: "Recommended",
                 pass2_name: "All-Inclusive Pass",
-                pass2_desc: "Total access: horses, unlimited golf range, and food/drinks all day long.",
+                pass2_desc: "Total access: horses, unlimited golf range, Midway House snacks, and food all day long.",
                 form_title: "Visitor Information for QR Pass",
                 form_name: "Full Name",
                 form_phone: "Phone / WhatsApp",
                 btn_generate: "Generate My Digital QR Pass",
                 btn_save_pass: "Save / Take Screenshot",
-                menu_tag: "Country Kitchen & Bar",
-                menu_title: "Featured Gastronomy Menu",
-                menu_desc: "Included without limit with your All-Inclusive Pass, or available a la carta for general pass visitors.",
-                m1_name: "Santa Carmen Country Breakfast",
-                m1_desc: "Organic ranch eggs, pot beans, artisanal fresh cheese, hand-pressed tortillas, and clay-pot coffee.",
-                m2_name: "The Boss's Cut & Sides",
-                m2_desc: "Fine fire-roasted cut served with rosemary baby potatoes, grilled vegetables, and molcajete salsa.",
-                m3_name: "Artisanal Cocktails & Refreshers",
-                m3_desc: "House margaritas with natural agave, mint lemonades, and cold local craft beers.",
+                menu_tag: "Avituallamiento & Athlete Fuel",
+                menu_title: "Midway House & Snack Bar",
+                menu_desc: "Popular, high-quality grab-and-go products for athletes, golfers, and visitors. Quick snacking, zero wait, 100% energy.",
+                m1_name: "Hydration & Electrolytes",
+                m1_desc: "Premium isotonic drinks, natural coconut water, electrolyte drinks, and cold brew coffees.",
+                m1_tag: "Instant Energy",
+                m2_name: "Protein Bars & Energy Fuel",
+                m2_desc: "Selection of protein bars (RXBAR, KIND, GoMacro), biltong, jerky, and trail mixes for the course.",
+                m2_tag: "High Performance",
+                m3_name: "Craft Beers & Chilled Cocktails",
+                m3_desc: "Cold local craft beers, hard seltzers, and refreshing beverages to enjoy right after your session.",
+                m3_tag: "Social & Refresh",
                 staff_modal_title: "Staff Verification",
                 staff_modal_desc: "Enter guest name to verify active pass status at Santa Carmen.",
                 btn_verify: "Verify Access",
